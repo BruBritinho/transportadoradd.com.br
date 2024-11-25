@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Transportes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Fonte personalizada */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        /* Estilo geral */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(90deg, #a6a6a6, #ffffff);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* Para rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        header img {
+            display: block;
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 0;
+            background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #2D33A6, #343BBF);
+            transition: all 0.3s ease, background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav a:hover {
+            background: linear-gradient(90deg, #343BBF, #2D33A6);
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container de seções */
+        .container {
+            padding: 2em 1em;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Estilo para as seções */
+        .section {
+            margin-bottom: 2em;
+        }
+        
+        /* Ajuste de padding e margem para seções */
+        .section {
+            padding-top: 60px; /* Ajuste conforme a altura da sua barra de navegação */
+            margin-top: -60px; /* Ajuste conforme a altura da sua barra de navegação */
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Rodapé */
+        footer {
+            background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 2em;
+            font-size: 0.9em;
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+        }
+
+        footer i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        /* Ícones */
+        nav a i {
+            font-size: 1.2em;
+        }
+
+        /* Botão WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 22px;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn i {
+            font-size: 25px; /* Ícone menor */
+        }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="head1.jpeg" alt="D&D Transportes - Especializada em transporte de cargas refrigeradas">
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#quem-somos"><i class="fas fa-users"></i> Quem Somos</a>
+        <a href="#rodoviario"><i class="fas fa-truck"></i> Rodoviário</a>
+        <a href="#nossos-clientes"><i class="fas fa-handshake"></i> Nossos Clientes</a>
+        <a href="#nossas-especialidades"><i class="fas fa-cogs"></i> Nossas Especialidades</a>
+    </nav>
+
+    <!-- Seção "Quem Somos" -->
+    <div class="container section" id="quem-somos">
+        <img src="quemsomos.jpeg" alt="Imagem de caminhão">
+    </div>
+
+    <!-- Rodoviário" -->
+    <div class="container section" id="rodoviario">
+        <img src="head3.jpg" alt="Rodoviário">
+    </div>
+
+    <!-- Seção "Nossos Clientes" -->
+    <div class="container section" id="nossos-clientes">
+        <img src="clientes.png" alt="Clientes">
+    </div>
+
+    <!-- Seção "Nossas Especialidades" -->
+    <div class="container section" id="nossas-especialidades">
+        <img src="epecialidades.jpeg" alt="Nossas Especialidades">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Nos contate e comece hoje a aprimorar suas entregas!</p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:transportesddmacena@gmail.com" style="color: white; text-decoration: none;">
+                transportesddmacena@gmail.com
+            </a>
+        </p>
+        <br>
+        <p>&copy; 2024 D&D Transportes - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511992385028" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
