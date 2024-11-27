@@ -1,155 +1,237 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D&D Transportes</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Transportes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Fonte personalizada */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-    }
+        /* Estilo geral */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(90deg, #a6a6a6, #ffffff);
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-    header {
-      background-color: #eee;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        /* Para rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
 
-    header img {
-      max-width: 120px;
-    }
+        /* Header */
+        header {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        header img {
+            display: block;
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    header div {
-      text-align: right;
-      font-size: 14px;
-    }
+        /* Navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 0;
+            background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #2D33A6, #343BBF);
+            transition: all 0.3s ease, background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav a:hover {
+            background: linear-gradient(90deg, #343BBF, #2D33A6);
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    .menu {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      background-color: #003b99;
-      padding: 10px;
-    }
+        /* Container de seções */
+        .container {
+            padding: 2em 1em;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    .menu button {
-      background-color: #0046d5;
-      border: none;
-      border-radius: 10px;
-      padding: 10px 15px;
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+        /* Estilo para as seções */
+        .section {
+            margin-bottom: 2em;
+        }
+        
+        /* Ajuste de padding e margem para seções */
+        .section {
+            padding-top: 60px;
+            margin-top: -60px;
+        }
 
-    .menu button:hover {
-      background-color: #003b99;
-    }
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+        }
 
-    .section {
-      margin: 20px auto;
-      max-width: 1200px;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        /* Rodapé */
+        footer {
+            background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 2em;
+            font-size: 0.9em;
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+        }
 
-    .section img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
+        footer i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
 
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-    }
+        /* Ícones */
+        nav a i {
+            font-size: 1.2em;
+        }
 
-    /* Media Queries para ajustar o layout em telas menores */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
+        /* Botão WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 22px;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn i {
+            font-size: 25px;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
 
-      .menu {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .menu button {
-        width: 100%;
-        justify-content: center;
-        font-size: 16px;
-        padding: 12px 20px;
-      }
-
-      .section {
-        margin: 10px;
-        padding: 15px;
-      }
-    }
-  </style>
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 0.5em;
+            }
+            nav a {
+                margin: 5px 0;
+                width: 90%;
+                text-align: center;
+            }
+            header img {
+                height: auto;
+            }
+            .section img {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <img src="https://via.placeholder.com/150x50" alt="Logo D&D Transportes">
-    <div>
-      <p>Especializada em transporte de cargas refrigeradas.</p>
-      <p>Horário de atendimento: Seg a Sex: 8:00 - 17:00</p>
+    <!-- Header -->
+    <header>
+        <img src="head1.jpeg" alt="D&D Transportes - Especializada em transporte de cargas refrigeradas">
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#quem-somos"><i class="fas fa-users"></i> Quem Somos</a>
+        <a href="#rodoviario"><i class="fas fa-truck"></i> Rodoviário</a>
+        <a href="#nossos-clientes"><i class="fas fa-handshake"></i> Nossos Clientes</a>
+        <a href="#nossas-especialidades"><i class="fas fa-cogs"></i> Nossas Especialidades</a>
+    </nav>
+
+    <!-- Seção "Quem Somos" -->
+    <div class="container section" id="quem-somos">
+        <img src="quemsomos.jpeg" alt="Imagem de caminhão">
     </div>
-  </header>
 
-  <!-- Menu -->
-  <nav class="menu">
-    <button><span>🚚</span> Rodoviário</button>
-    <button><span>🤝</span> Nossos Clientes</button>
-    <button><span>⚙️</span> Nossas Especialidades</button>
-  </nav>
+    <!-- Rodoviário -->
+    <div class="container section" id="rodoviario">
+        <img src="head3.jpg" alt="Rodoviário">
+    </div>
 
-  <!-- Conteúdo principal -->
-  <section class="section">
-    <h2>Quem somos nós</h2>
-    <p>
-      D&D Transportes, fundada por dois irmãos dedicados, é especializada em transporte de alimentos.
-      Equipados com refrigeradores em todos os caminhões, garantimos a integridade dos produtos.
-    </p>
-    <img src="https://via.placeholder.com/1200x400" alt="Caminhão">
-  </section>
+    <!-- Seção "Nossos Clientes" -->
+    <div class="container section" id="nossos-clientes">
+        <img src="clientes.png" alt="Clientes">
+    </div>
 
-  <section class="section">
-    <h2>Região de Atendimento</h2>
-    <p>
-      Atendemos o ABCD e toda a região metropolitana de São Paulo.
-    </p>
-    <img src="https://via.placeholder.com/1200x400" alt="Mapa São Paulo">
-  </section>
+    <!-- Seção "Nossas Especialidades" -->
+    <div class="container section" id="nossas-especialidades">
+        <img src="epecialidades.jpeg" alt="Nossas Especialidades">
+    </div>
 
-  <section class="section">
-    <h2>Clientes</h2>
-    <img src="https://via.placeholder.com/1200x400" alt="Clientes">
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p>Nos contate e comece hoje a aprimorar suas entregas!</p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="#" onclick="openGmailPopup()" style="color: white; text-decoration: none;">
+                transportesddmacena@gmail.com
+            </a>
+        </p>
+        <br>
+        <p>&copy; 2024 D&D Transportes - Todos os direitos reservados.</p>
+    </footer>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/5511999999999" class="whatsapp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
-  </a>
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511992385028" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Script para abrir o Gmail em uma janela popup -->
+    <script>
+        function openGmailPopup() {
+            const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com";
+            const options = "width=600,height=600,resizable,scrollbars";
+            window.open(url, "gmailPopup", options);
+        }
+    </script>
 </body>
 </html>
