@@ -8,241 +8,219 @@
     <link rel="icon" type="image/png" href="ICONE D&D BRANCO.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Fonte personalizada */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    /* Fonte personalizada */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-        /* Estilo geral */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(90deg, #a6a6a6, #ffffff);
-            background-attachment: fixed;
-            background-size: cover;
+    /* Reset e base */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(90deg, #a6a6a6, #ffffff);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* HEADER com navegação integrada */
+    .main-header {
+        background-color: #373535;
+        padding: 10px 30px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .navigation a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1em;
+        transition: color 0.3s ease;
+    }
+
+    .navigation a:hover {
+        color: #ffd700;
+    }
+
+    .quote-button {
+        background: white;
+        color: #000;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .quote-button:hover {
+        background: #ffd700;
+        color: #000;
+    }
+
+    /* Seções gerais */
+    .container {
+        padding: 2em 1em;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .section {
+        margin-bottom: 2em;
+        padding-top: 60px;
+        margin-top: -60px;
+    }
+
+    .section img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1em;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section img:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Rodapé */
+    footer {
+        background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
+        color: white;
+        text-align: center;
+        padding: 1.5em 0;
+        margin-top: 2em;
+        font-size: 0.9em;
+        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+        margin: 0.5em 0;
+    }
+
+    footer i {
+        margin-right: 8px;
+        font-size: 1.2em;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #25d366;
+    }
+
+    /* Botão WhatsApp fixo */
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        border-radius: 50%;
+        padding: 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        color: white;
+        font-size: 22px;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .whatsapp-btn i {
+        font-size: 25px;
+    }
+
+    .whatsapp-btn:hover {
+        background-color: #128c7e;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
         }
 
-        /* Para rolagem suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Header */
-        .main-header {
-    background-color: #373535; /* fundo escuro */
-    padding: 10px 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo img {
-    max-height: 50px;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.navigation a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    transition: all 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #FFD700; /* ou qualquer cor de destaque */
-}
-
-.quote-button {
-    background: white;
-    color: #000;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.quote-button:hover {
-    background: #FFD700;
-    color: #000;
-}
-
-
-        /* Navegação */
-        nav {
-            display: flex;
+        .navigation {
             justify-content: center;
-            align-items: center;
-            padding: 1em 0;
-            background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            padding: 10px 20px;
-            border-radius: 30px;
-            background: linear-gradient(90deg, #2D33A6, #343BBF);
-            transition: all 0.3s ease, background 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        nav a:hover {
-            background: linear-gradient(90deg, #343BBF, #2D33A6);
-            transform: scale(1.1);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            flex-wrap: wrap;
         }
 
-        /* Container de seções */
-        .container {
-            padding: 2em 1em;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* Estilo para as seções */
-        .section {
-            margin-bottom: 2em;
-        }
-        
-        /* Ajuste de padding e margem para seções */
-        .section {
-            padding-top: 60px;
-            margin-top: -60px;
+        .quote {
+            margin-top: 10px;
         }
 
         .section img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section img:hover {
-            transform: scale(1.02);
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
         }
 
-        /* Rodapé */
-        footer {
-            background: linear-gradient(90deg, #111440, #1F2373, #2D33A6, #343BBF);
-            color: white;
-            text-align: center;
-            padding: 1.5em 0;
-            margin-top: 2em;
-            font-size: 0.9em;
-            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+        .logo img {
+            max-width: 80%;
+            margin-bottom: 10px;
         }
-        footer p {
-            margin: 0;
-        }
+    }
+</style>
 
-        footer i {
-            margin-right: 8px;
-            font-size: 1.2em;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #25d366;
-        }
-
-        /* Ícones */
-        nav a i {
-            font-size: 1.2em;
-        }
-
-        /* Botão WhatsApp */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            border-radius: 50%;
-            padding: 15px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            color: white;
-            font-size: 22px;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-        }
-        .whatsapp-btn i {
-            font-size: 25px;
-        }
-        .whatsapp-btn:hover {
-            background-color: #128c7e;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 0.5em;
-            }
-            nav a {
-                margin: 5px 0;
-                width: 90%;
-                text-align: center;
-            }
-            header img {
-                height: auto;
-            }
-            .section img {
-                max-width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="main-header">
-    <div class="header-container">
-        <div class="logo">
-            <img src="LOGO D&D BRANCO.png" alt="D&D Transportes">
-        </div>
-        <nav class="navigation">
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#nossas-especialidades">Especialidades</a>
-            <a href="#nossos-clientes">Nossos Clientes</a>
-            <a href="#footer">Contato</a>
-            <a href="#rodoviario">Rodoviário</a>
-            <a href="#cotacao" class="quote-button">Solicite uma cotação</a>
-        </nav>
+  <div class="header-container">
+    <div class="logo">
+      <img src="LOGO D&D BRANCO.png" alt="D&D Transportes">
     </div>
+    <nav class="navigation">
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#nossas-especialidades">Especialidades</a>
+      <a href="#nossos-clientes">Nossos Clientes</a>
+      <a href="#footer">Contato</a>
+      <a href="#rodoviario">Rodoviário</a>
+    </nav>
+    <div class="quote">
+      <a href="#cotacao" class="quote-button">Solicite uma cotação</a>
+    </div>
+  </div>
 </header>
+
 
 
     <!-- Navegação -->
