@@ -29,44 +29,58 @@
         }
 
         /* Header */
-        .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #e0e0e0;
-        padding: 20px 40px;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+        .main-header {
+    background-color: #222; /* fundo escuro */
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .logo img {
-        max-width: 260px;
-        height: auto;
-    }
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .info {
-        max-width: 600px;
-        font-size: 1em;
-        color: #000;
-    }
+.logo img {
+    max-height: 50px;
+}
 
-    .info p {
-        margin: 10px 0;
-    }
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    .info i {
-        margin-right: 10px;
-        color: #111440;
-    }
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
 
-    .info a {
-        color: #000;
-        text-decoration: none;
-    }
+.navigation a:hover {
+    color: #FFD700; /* ou qualquer cor de destaque */
+}
 
-    .info a:hover {
-        text-decoration: underline;
-    }
+.quote-button {
+    background: white;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.quote-button:hover {
+    background: #FFD700;
+    color: #000;
+}
+
 
         /* Navegação */
         nav {
@@ -214,23 +228,22 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-    <div class="header-content">
+    <header class="main-header">
+    <div class="header-container">
         <div class="logo">
             <img src="LOGO D&D CINZA.png" alt="D&D Transportes">
         </div>
-        <div class="info">
-            <p><i class="fas fa-box"></i> Especializada em transporte de cargas refrigeradas.</p>
-            <p><i class="fas fa-clock"></i> Horário de atendimento: <br>Seg a Sex: 8:00 - 17:00</p>
-            <p>
-                <i class="fab fa-whatsapp"></i>
-                <a href="https://wa.me/5511947472376" target="_blank">(11) 94747-2376 - Deivid</a><br>
-                <i class="fab fa-whatsapp"></i>
-                <a href="https://wa.me/5511992385028" target="_blank">(11) 99238-5028 - Denis</a>
-            </p>
-        </div>
+        <nav class="navigation">
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#nossas-especialidades">Especialidades</a>
+            <a href="#nossos-clientes">Nossos Clientes</a>
+            <a href="#footer">Contato</a>
+            <a href="#rodoviario">Rodoviário</a>
+            <a href="#cotacao" class="quote-button">Solicite uma cotação</a>
+        </nav>
     </div>
 </header>
+
 
     <!-- Navegação -->
     <nav>
