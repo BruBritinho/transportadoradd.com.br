@@ -29,17 +29,44 @@
         }
 
         /* Header */
-        header {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        header img {
-            display: block;
-            width: 100%;
-            height: auto;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
+        .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #e0e0e0;
+        padding: 20px 40px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logo img {
+        max-width: 260px;
+        height: auto;
+    }
+
+    .info {
+        max-width: 600px;
+        font-size: 1em;
+        color: #000;
+    }
+
+    .info p {
+        margin: 10px 0;
+    }
+
+    .info i {
+        margin-right: 10px;
+        color: #111440;
+    }
+
+    .info a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .info a:hover {
+        text-decoration: underline;
+    }
 
         /* Navegação */
         nav {
@@ -188,8 +215,22 @@
 <body>
     <!-- Header -->
     <header>
-        <img src="LOGO D&D CINZA.png" alt="D&D Transportes - Especializada em transporte de cargas refrigeradas">
-    </header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="LOGO D&D CINZA.png" alt="D&D Transportes">
+        </div>
+        <div class="info">
+            <p><i class="fas fa-box"></i> Especializada em transporte de cargas refrigeradas.</p>
+            <p><i class="fas fa-clock"></i> Horário de atendimento: <br>Seg a Sex: 8:00 - 17:00</p>
+            <p>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/5511947472376" target="_blank">(11) 94747-2376 - Deivid</a><br>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/5511992385028" target="_blank">(11) 99238-5028 - Denis</a>
+            </p>
+        </div>
+    </div>
+</header>
 
     <!-- Navegação -->
     <nav>
