@@ -1,290 +1,274 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D&D Transportes</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="ICONE D&D BRANCO.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-   <style>
-  /* Fonte personalizada */
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>D&D Transportes</title>
+  <link rel="icon" type="image/png" href="ICONE D&D BRANCO.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-  body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(90deg, #a6a6a6, #ffffff);
-    background-attachment: fixed;
-    background-size: cover;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  html {
-    scroll-behavior: smooth;
-  }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(90deg, #a6a6a6, #ffffff);
+      background-attachment: fixed;
+      background-size: cover;
+    }
 
-  /* Header com navegação e botão */
-  .main-header {
-    background-color: #373535; /* Nova cor */
-    padding: 4px 10px; /* Menor altura */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    .main-header {
+      background-color: #373535;
+      padding: 4px 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
 
-  .logo img {
-  max-height: 100px;
-  transform: scale(1.5); /* aumenta a imagem visualmente */
-  margin-left: -10px;
-  }
-
-  .navigation {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-  }
-
-  .navigation a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.3s ease;
-  }
-
-  .navigation a:hover {
-    color: #d8ad13;
-  }
-
-  .navigation i {
-    font-size: 1em;
-    color: #d8ad13;
-  }
-
-  .quote-button {
-    background: white;
-    color: #000;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
-
-  .quote-button:hover {
-    background: #d8ad13;
-    color: #000;
-  }
-
-  /* Seções gerais */
-  .container {
-    padding: 2em 1em;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .section {
-    margin-bottom: 2em;
-    padding-top: 60px;
-    margin-top: -60px;
-  }
-
-  .section img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1em;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .section img:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Rodapé */
-  footer {
-    background-color: #373535;
-    color: white;
-    text-align: center;
-    padding: 1.5em 0;
-    margin-top: 2em;
-    font-size: 0.9em;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
-}
-
-  footer p {
-    margin: 0.5em 0;
-  }
-
-  footer i {
-    margin-right: 8px;
-    font-size: 1.2em;
-    color: #d8ad13;
-  }
-
-  footer a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  footer a:hover {
-    color: #25d366;
-  }
-
-  /* Botão WhatsApp flutuante */
-  .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    border-radius: 50%;
-    padding: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    color: white;
-    width: 50px;      /* aumentou */
-    height: 50px;     /* aumentou */
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.whatsapp-btn i {
-    font-size: 28px; /* ajuste proporcional */
-}
-
-.whatsapp-btn:hover {
-    background-color: #128c7e;
-}
-
-
-  /* Responsivo */
-  @media (max-width: 768px) {
     .header-container {
-      flex-direction: column;
+      display: flex;
       align-items: center;
-      text-align: center;
-      gap: 10px;
-    }
-
-    .navigation {
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
-    }
-
-    .quote {
-      margin-top: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 30px;
     }
 
     .logo img {
-      max-width: 90%;
-      margin-bottom: 10px;
+      max-height: 80px;
+      transform: scale(1.5);
+      transform-origin: left center;
+      margin-left: -10px;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .navigation a:hover {
+      color: #d8ad13;
+    }
+
+    .navigation i {
+      font-size: 1em;
+      color: #d8ad13;
     }
 
     .quote-button {
-      margin-top: 10px;
+      background: white;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      white-space: nowrap;
     }
-  }
-</style>
 
+    .quote-button:hover {
+      background: #d8ad13;
+      color: #000;
+    }
 
+    .container {
+      padding: 2em 1em;
+      max-width: 1200px;
+      margin: auto;
+    }
 
+    .section {
+      margin-bottom: 2em;
+      padding-top: 60px;
+      margin-top: -60px;
+    }
+
+    .section img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #373535;
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+      margin-top: 2em;
+      font-size: 0.9em;
+      box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      margin: 0.5em 0;
+    }
+
+    footer i {
+      margin-right: 8px;
+      font-size: 1.2em;
+      color: #d8ad13;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #25d366;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 38px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128c7e;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .quote {
+        margin-top: 10px;
+      }
+
+      .logo img {
+        max-width: 90%;
+        margin-bottom: 10px;
+      }
+
+      .quote-button {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="main-header">
-  <div class="header-container">
-    <div class="logo">
-      <img src="LOGO D&D BRANCO.png" alt="D&D Transportes">
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="LOGO D&D BRANCO.png" alt="D&D Transportes" />
+      </div>
+      <nav class="navigation">
+        <a href="#quem-somos"><i class="fas fa-users"></i> Quem Somos</a>
+        <a href="#rodoviario"><i class="fas fa-truck"></i> Rodoviário</a>
+        <a href="#nossos-clientes"><i class="fas fa-handshake"></i> Nossos Clientes</a>
+        <a href="#nossas-especialidades"><i class="fas fa-cogs"></i> Nossas Especialidades</a>
+        <a href="#footer"><i class="fas fa-envelope"></i> Contato</a>
+      </nav>
+      <div class="quote">
+        <a href="#cotacao" class="quote-button">Solicite uma cotação</a>
+      </div>
     </div>
-    <nav class="navigation">
-      <a href="#quem-somos"><i class="fas fa-users"></i> Quem Somos</a>
-      <a href="#rodoviario"><i class="fas fa-truck"></i> Rodoviário</a>
-      <a href="#nossos-clientes"><i class="fas fa-handshake"></i> Nossos Clientes</a>
-      <a href="#nossas-especialidades"><i class="fas fa-cogs"></i> Nossas Especialidades</a>
-      <a href="#footer"><i class="fas fa-envelope"></i> Contato</a>
-    </nav>
-    <div class="quote">
-      <a href="#cotacao" class="quote-button">Solicite uma cotação</a>
-    </div>
+  </header>
+
+  <!-- Seções -->
+  <div class="container section" id="quem-somos">
+    <img src="quemsomos.jpeg" alt="Imagem de caminhão" />
   </div>
-</header>
 
+  <div class="container section" id="rodoviario">
+    <img src="head3.jpg" alt="Rodoviário" />
+  </div>
 
-    <!-- Seção "Quem Somos" -->
-    <div class="container section" id="quem-somos">
-        <img src="quemsomos.jpeg" alt="Imagem de caminhão">
-    </div>
+  <div class="container section" id="nossos-clientes">
+    <img src="clientes.png" alt="Clientes" />
+  </div>
 
-    <!-- Rodoviário -->
-    <div class="container section" id="rodoviario">
-        <img src="head3.jpg" alt="Rodoviário">
-    </div>
+  <div class="container section" id="nossas-especialidades">
+    <img src="epecialidades.jpeg" alt="Nossas Especialidades" />
+  </div>
 
-    <!-- Seção "Nossos Clientes" -->
-    <div class="container section" id="nossos-clientes">
-        <img src="clientes.png" alt="Clientes">
-    </div>
+  <!-- Rodapé -->
+  <footer id="footer">
+    <p>Nos contate e comece hoje a aprimorar suas entregas!</p>
+    <p>
+      <i class="fas fa-envelope"></i>
+      <a href="#" onclick="openGmailPopup()">transportesddmacena@gmail.com</a>
+    </p>
+    <p>
+      <a href="https://wa.me/5511947472376" target="_blank">
+        <i class="fab fa-whatsapp"></i> (11) 94747-2376
+      </a><br />
+      <a href="https://wa.me/5511992385028" target="_blank">
+        <i class="fab fa-whatsapp"></i> (11) 99238-5028
+      </a>
+    </p>
+    <br />
+    <p>&copy; 2025 D&D Transportes - Todos os direitos reservados.</p>
+  </footer>
 
-    <!-- Seção "Nossas Especialidades" -->
-    <div class="container section" id="nossas-especialidades">
-        <img src="epecialidades.jpeg" alt="Nossas Especialidades">
-    </div>
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/5511992385028" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <p>Nos contate e comece hoje a aprimorar suas entregas!</p>
-        <p>
-            <i class="fas fa-envelope"></i>
-            <a href="#" onclick="openGmailPopup()">transportesddmacena@gmail.com</a>
-        </p>
-        <p>
-            <a href="https://wa.me/5511947472376" target="_blank">
-                <i class="fas fa-phone"></i> (11) 94747-2376
-            </a><br>
-            <a href="https://wa.me/5511992385028" target="_blank">
-                <i class="fas fa-phone"></i> (11) 99238-5028
-            </a>
-        </p>
-        <br>
-        <p>&copy; 2025 D&D Transportes - Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- Botão WhatsApp -->
-    <a href="https://wa.me/5511992385028" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Script para abrir o Gmail em uma janela popup -->
-    <script>
-        function openGmailPopup() {
-            const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com";
-            window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
-        }
-    </script>
+  <!-- Script Gmail -->
+  <script>
+    function openGmailPopup() {
+      const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com";
+      window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
+    }
+  </script>
 </body>
 </html>
