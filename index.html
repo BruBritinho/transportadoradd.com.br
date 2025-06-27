@@ -8,102 +8,108 @@
     <link rel="icon" type="image/png" href="ICONE D&D BRANCO.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
    <style>
- /* Fonte personalizada */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  /* Fonte personalizada */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
+  /* Reset básico */
+  * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
     font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
     background: linear-gradient(90deg, #a6a6a6, #ffffff);
-}
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
-/* Header */
-.header-content {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Header com navegação e botão */
+  .main-header {
+    background-color: #373535; /* Nova cor */
+    padding: 6px 30px; /* Menor altura */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .header-container {
     display: flex;
     align-items: center;
-    background-color: #373535;
-    padding: 10px 40px;
-    gap: 40px;
-}
-
-.logo {
-    margin-left: -10px;
-}
-
-.logo img {
-    max-height: 80px;
-    transform: scale(1.5);
-    transform-origin: left center;
-    display: block;
-}
-
-/* Menu + botão agrupados */
-.menu-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    justify-content: space-between;
     flex-wrap: wrap;
-}
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-/* Navegação */
-nav {
+  .logo img {
+  max-height: 100px;
+  transform: scale(1.5); /* aumenta a imagem visualmente */
+  transform-origin: left center; /* ancora o aumento para não deslocar a imagem */
+  margin-right: 30px;
+  }
+
+  .navigation {
     display: flex;
-    align-items: center;
     gap: 25px;
-}
+    flex-wrap: wrap;
+  }
 
-nav a {
+  .navigation a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1em;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
+    gap: 6px;
+    transition: color 0.3s ease;
+  }
 
-nav a i {
+  .navigation a:hover {
     color: #d8ad13;
-    font-size: 18px;
-}
+  }
 
-nav a:hover {
+  .navigation i {
+    font-size: 1em;
     color: #d8ad13;
-    transform: scale(1.05);
-}
+  }
 
-/* Botão de Cotação */
-.cta-button {
-    background-color: white;
-    color: black;
+  .quote-button {
+    background: white;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 6px;
     font-weight: bold;
-    padding: 10px 16px;
-    border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
-}
+  }
 
-.cta-button:hover {
-    background-color: #d8ad13;
-    color: #373535;
-}
+  .quote-button:hover {
+    background: #d8ad13;
+    color: #000;
+  }
 
-/* Seções */
-.container {
+  /* Seções gerais */
+  .container {
     padding: 2em 1em;
     max-width: 1200px;
     margin: auto;
-}
+  }
 
-.section {
+  .section {
     margin-bottom: 2em;
     padding-top: 60px;
     margin-top: -60px;
-}
+  }
 
-.section img {
+  .section img {
     display: block;
     width: 100%;
     height: auto;
@@ -111,15 +117,15 @@ nav a:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  }
 
-.section img:hover {
+  .section img:hover {
     transform: scale(1.02);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-}
+  }
 
-/* Footer */
-footer {
+  /* Rodapé */
+  footer {
     background-color: #373535;
     color: white;
     text-align: center;
@@ -129,75 +135,81 @@ footer {
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer i {
+  footer p {
+    margin: 0.5em 0;
+  }
+
+  footer i {
     margin-right: 8px;
     font-size: 1.2em;
     color: #d8ad13;
-}
+  }
 
-footer a {
+  footer a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-}
+  }
 
-footer a:hover {
+  footer a:hover {
     color: #25d366;
-}
+  }
 
-/* Botão WhatsApp */
-.whatsapp-btn {
+  /* Botão WhatsApp flutuante */
+  .whatsapp-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
     border-radius: 50%;
-    width: 75px;
-    height: 75px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 50px;      /* aumentou */
+    height: 50px;     /* aumentou */
+    z-index: 1000;
+    transition: background-color 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 38px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn i {
+    font-size: 28px; /* ajuste proporcional */
 }
 
 .whatsapp-btn:hover {
     background-color: #128c7e;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
     }
 
-    .menu-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    .navigation {
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    nav {
-        flex-wrap: wrap;
-        gap: 15px;
+    .quote {
+      margin-top: 10px;
     }
 
     .logo img {
-        max-width: 80%;
-        transform: scale(1.2);
+      max-width: 90%;
+      margin-bottom: 10px;
     }
 
-    .cta-button {
-        width: 100%;
-        text-align: center;
+    .quote-button {
+      margin-top: 10px;
     }
-}
-
+  }
 </style>
 
 
