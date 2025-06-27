@@ -207,27 +207,28 @@
     .hero-section {
   background: url('background 1.png') no-repeat center center;
   background-size: cover;
-  height: 700px; /* ajuste a altura conforme necessário */
+  height: 700px;
   display: flex;
   align-items: center;
-  padding-left: 60px;
+  justify-content: flex-start;
   color: white;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
   scroll-margin-top: 90px;
 }
 
-.hero-section h1 {
-  font-size: 45px;
-  font-weight: 900; /* Black */
-  margin-bottom: 10px;
+.hero-text {
+  max-width: 600px;
+  margin-left: 60px; /* espaçamento da esquerda */
 }
 
-.hero-section p {
+.hero-text h1 {
+  font-size: 45px;
+  font-weight: 900; /* Black */
+  margin-bottom: 15px;
+}
+
+.hero-text p {
   font-size: 22px;
   font-weight: 500; /* Medium */
-  max-width: 600px;
 }
   </style>
 </head>
