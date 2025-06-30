@@ -280,6 +280,13 @@
   max-width: 300px;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* adicionado */
+  cursor: default; /* opcional, melhora a UX visual */
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02); /* efeito de elevação */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* sombra mais forte */
 }
 
 .card img {
