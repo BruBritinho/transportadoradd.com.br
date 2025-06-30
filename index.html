@@ -219,11 +219,12 @@
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   max-width: 1200px;
   padding-left: 60px;
   padding-right: 60px;
+  gap: 30px; /* REDUZIDO o espaço entre texto e ícone */
 }
 
 .hero-text {
@@ -244,7 +245,7 @@
 }
 
 .hero-icon img {
-  max-width: 180px;
+  max-width: 100px; /* REDUZIDO para aproximar visualmente */
   height: auto;
 }
 
@@ -279,7 +280,7 @@
       <p>Levamos sua carga com responsabilidade,<br>onde quer que ela precise chegar.</p>
     </div>
     <div class="hero-icon">
-      <img src="icon km.png" alt="Ícone KM">
+      <img src="icon km.png" alt="Ícone de quilômetro">
     </div>
   </div>
 </section>
