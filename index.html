@@ -439,27 +439,27 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 40px;
-  padding: 0 20px; /* 🔧 margem interna para afastar da borda */
+  gap: 60px; /* 🔧 AUMENTA o espaço horizontal entre imagem e texto */
+  padding: 0 20px;
 }
 
 .especialidades-img {
   flex: 1 1 400px;
   display: flex;
-  justify-content: center; /* centraliza internamente */
+  justify-content: center;
+  padding-left: 20px; /* 🔧 adiciona espaço na ESQUERDA da imagem */
 }
 
 .especialidades-img img {
-  width: 120%;
+  width: 100%;
   border-radius: 12px;
-  object-fit: contain;
 }
 
 .especialidades-texto {
   flex: 1 1 500px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px; /* 🔧 aumenta o espaçamento entre texto, lista e botão */
 }
 
 .especialidades-texto p {
@@ -474,7 +474,7 @@
 
 .lista-cidades {
   max-height: 160px;
-  max-width: 300px; /* 🔧 largura reduzida */
+  max-width: 300px;
   overflow-y: auto;
   padding-left: 15px;
   padding-right: 10px;
