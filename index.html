@@ -320,6 +320,106 @@
   line-height: 1.5;
 }
 
+.quem-somos {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  font-size: 16px;
+  color: #373535;
+}
+
+.quem-somos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quem-somos-texto {
+  flex: 1 1 500px;
+}
+
+.quem-somos-texto .titulo {
+  font-size: 33px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.quem-somos-texto .subtitulo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitulo .destaque {
+  color: #d7ad14;
+}
+
+.quem-somos-texto p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.quem-somos-img {
+  position: relative;
+  flex: 1 1 400px;
+}
+
+.quem-somos-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.selo-experiencia {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.selo-experiencia img {
+  width: 24px;
+  height: 24px;
+}
+
+.missoes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.missao {
+  max-width: 300px;
+}
+
+.missao img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.missao h4 {
+  color: #d7ad14;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.missao p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
   </style>
 </head>
 
@@ -395,9 +495,37 @@
   </div>
 </section>
 
-  <div class="container section" id="nossos-clientes">
-    <img src="clientes.png" alt="Clientes" />
+  <section class="quem-somos section" id="nossos-clientes">
+  <div class="quem-somos-container">
+    <div class="quem-somos-texto">
+      <h2 class="titulo">Quem somos?</h2>
+      <h3 class="subtitulo">Dois irmãos, <span class="destaque">um objetivo</span></h3>
+      <p>A D&D Transportes nasceu da dedicação de dois irmãos e se especializou no transporte de alimentos com segurança e pontualidade. Todos os nossos caminhões são refrigerados, garantindo a integridade dos produtos do início ao fim da entrega.</p>
+      <p>Contamos com uma frota versátil e motoristas experientes para atender diferentes demandas logísticas. Atuamos como parceiros estratégicos de empresas que valorizam prazos confiáveis, qualidade superior e total satisfação dos clientes.</p>
+    </div>
+    <div class="quem-somos-img">
+      <img src="Imagem caminhão.png" alt="Caminhão rodando" />
+      <div class="selo-experiencia">
+        <img src="icone-selo.png" alt="Ícone Selo" />
+        <span><strong>4+ anos</strong><br>Experiência</span>
+      </div>
+    </div>
   </div>
+
+  <div class="missoes">
+    <div class="missao">
+      <img src="icone alvo.png" alt="Ícone missão" />
+      <h4>Nossa missão</h4>
+      <p>Comprometer-nos com excelência no transporte, garantindo prazos e qualidade superiores</p>
+    </div>
+    <div class="missao">
+      <img src="Icone seta.png" alt="Ícone visão" />
+      <h4>Nossa visão</h4>
+      <p>Buscar ser líderes reconhecidos no transporte, estabelecendo novos padrões de excelência</p>
+    </div>
+  </div>
+</section>
+
 
   <div class="container section" id="nossas-especialidades">
     <img src="epecialidades.jpeg" alt="Nossas Especialidades" />
