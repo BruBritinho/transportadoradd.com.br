@@ -467,14 +467,24 @@
 }
 
 .lista-cidades {
-  max-height: 160px;
+  max-height: 200px;
   overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.lista-cidades ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: #373535;
+}
+
+.lista-cidades ul li {
+  margin-bottom: 6px;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .botao-regiao {
@@ -633,7 +643,7 @@
         <p>
           Estamos localizados em Santo André, mas nossos <br>
           transportes abrangem toda a região <br>
-          metropolitana de <span class="highlight">São Paulo</span> e ABC paulista.
+          metropolitana de São Paulo e ABC paulista.
         </p>
         <p class="subtitulo">Confira as cidades atendidas:</p>
         <div class="lista-cidades">
@@ -673,7 +683,7 @@
             <li>São Bernardo do Campo</li>
             <li>São Caetano do Sul</li>
             <li>São Lourenço da Serra</li>
-            <li><span class="highlight">São Paulo</span></li>
+            <li>São Paulo</li>
             <li>Suzano</li>
             <li>Taboão da Serra</li>
             <li>Vargem Grande Paulista</li>
