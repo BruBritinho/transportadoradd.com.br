@@ -472,16 +472,26 @@
   border: 1px solid #ccc;
   padding: 10px 15px;
   border-radius: 8px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.lista-cidades ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
+.botao-regiao {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #d7ad14;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.lista-cidades li {
-  margin-bottom: 6px;
+.botao-regiao:hover {
+  background-color: #b89310;
 }
 
 
@@ -623,7 +633,7 @@
         <p>
           Estamos localizados em Santo André, mas nossos <br>
           transportes abrangem toda a região <br>
-          metropolitana de São Paulo e ABC paulista.
+          metropolitana de <span class="highlight">São Paulo</span> e ABC paulista.
         </p>
         <p class="subtitulo">Confira as cidades atendidas:</p>
         <div class="lista-cidades">
@@ -663,18 +673,19 @@
             <li>São Bernardo do Campo</li>
             <li>São Caetano do Sul</li>
             <li>São Lourenço da Serra</li>
-            <li>São Paulo</li>
+            <li><span class="highlight">São Paulo</span></li>
             <li>Suzano</li>
             <li>Taboão da Serra</li>
             <li>Vargem Grande Paulista</li>
           </ul>
         </div>
+
+        <!-- BOTÃO ADICIONADO -->
+        <a href="#contato" class="botao-regiao">Confira sua região</a>
       </div>
     </div>
   </div>
 </section>
-
-
 
   <!-- Rodapé -->
   <footer id="footer">
