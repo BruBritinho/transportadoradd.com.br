@@ -410,6 +410,69 @@
     scroll-margin-top: 90px;
   }
 
+
+.especialidades {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  font-size: 16px;
+  color: #373535;
+}
+
+.especialidades-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.especialidades-img {
+  flex: 1 1 400px;
+}
+
+.especialidades-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.especialidades-texto {
+  flex: 1 1 500px;
+}
+
+.especialidades-texto .titulo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.especialidades-texto .titulo .destaque {
+  color: #d7ad14;
+}
+
+.especialidades-texto p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.especialidades-subtitulo {
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.lista-cidades {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+
   </style>
 </head>
 
@@ -535,10 +598,69 @@
   </div>
 </section>
 
+  <section class="especialidades" id="nossas-especialidades">
+  <div class="especialidades-container">
+    <div class="especialidades-img">
+      <img src="especialidades.jpeg" alt="Caminhão na estrada" />
+    </div>
 
-  <div class="container section" id="nossas-especialidades">
-    <img src="epecialidades.jpeg" alt="Nossas Especialidades" />
+    <div class="especialidades-texto">
+      <h2 class="titulo">Atendemos a região metropolitana de <span class="destaque">São Paulo</span></h2>
+      <p>
+        Estamos localizados em Santo André, mas nossos <br />
+        transportes abrangem toda a região <br />
+        metropolitana de São Paulo e ABC paulista.
+      </p>
+
+      <h3 class="subtitulo">Confira as cidades atendidas:</h3>
+
+      <div class="lista-cidades">
+        <ul>
+          <li>Arujá</li>
+          <li>Barueri</li>
+          <li>Biritiba Mirim</li>
+          <li>Caieiras</li>
+          <li>Cajamar</li>
+          <li>Carapicuíba</li>
+          <li>Cotia</li>
+          <li>Diadema</li>
+          <li>Embu das Artes</li>
+          <li>Embu-Guaçu</li>
+          <li>Ferraz de Vasconcelos</li>
+          <li>Francisco Morato</li>
+          <li>Franco da Rocha</li>
+          <li>Guararema</li>
+          <li>Guarulhos</li>
+          <li>Itapecerica da Serra</li>
+          <li>Itapevi</li>
+          <li>Itaquaquecetuba</li>
+          <li>Jandira</li>
+          <li>Juquitiba</li>
+          <li>Mairiporã</li>
+          <li>Mauá</li>
+          <li>Mogi das Cruzes</li>
+          <li>Osasco</li>
+          <li>Pirapora do Bom Jesus</li>
+          <li>Poá</li>
+          <li>Ribeirão Pires</li>
+          <li>Rio Grande da Serra</li>
+          <li>Salesópolis</li>
+          <li>Santa Isabel</li>
+          <li>Santana de Parnaíba</li>
+          <li>Santo André</li>
+          <li>São Bernardo do Campo</li>
+          <li>São Caetano do Sul</li>
+          <li>São Lourenço da Serra</li>
+          <li>São Paulo</li>
+          <li>Suzano</li>
+          <li>Taboão da Serra</li>
+          <li>Vargem Grande Paulista</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</section>
+
 
   <!-- Rodapé -->
   <footer id="footer">
