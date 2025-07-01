@@ -339,44 +339,12 @@
 
 .quem-somos-texto {
   flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
-/* TÍTULOS CENTRALIZADOS */
-.titulos-centro {
-  text-align: center;
-}
-
-.titulos-centro .titulo {
-  font-size: 33px;
-  font-weight: 800;
-  color: #373535;
-  margin-bottom: 5px;
-}
-
-.titulos-centro .subtitulo {
-  font-size: 30px;
-  font-weight: 700;
-  color: #373535;
-}
-
-.subtitulo .destaque,
-.highlight {
-  color: #d7ad14;
-}
-
-/* PARÁGRAFOS ALINHADOS À ESQUERDA */
-.paragrafos {
-  text-align: left;
-  font-size: 16px;
-  color: #373535;
-}
-
-.paragrafos p {
+.quem-somos-texto p {
   margin-bottom: 15px;
   line-height: 1.6;
+  white-space: normal;
 }
 
 .quem-somos-img {
@@ -430,6 +398,28 @@
 .missao p {
   font-size: 16px;
   line-height: 1.5;
+  white-space: normal;
+}
+
+/* 🔧 Novos estilos para centralizar corretamente */
+.highlight {
+  color: #d7ad14;
+}
+
+.titulo {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #373535;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #373535;
+  text-align: center;
 }
 
   </style>
@@ -509,20 +499,27 @@
 
   <section class="quem-somos" id="nossos-clientes">
   <div class="container">
-    <h2 class="diferenciais-titulo">Quem somos?</h2>
-    <h3 class="subtitulo subtitulo-centro">Dois irmãos, <span class="highlight">um objetivo</span></h3>
+    <h2 class="titulo" style="text-align: center;">Quem somos?</h2>
+    <h3 class="subtitulo" style="text-align: center;">
+      Dois irmãos, <span class="highlight">um objetivo</span>
+    </h3>
 
     <div class="quem-somos-container">
       <div class="quem-somos-texto">
         <p>
-          A D&D Transportes nasceu da dedicação de dois irmãos e se especializou no transporte
-          de alimentos com segurança e pontualidade. Todos os nossos caminhões são
-          refrigerados, garantindo a integridade dos produtos do início ao fim da entrega.
+          A D&D Transportes nasceu da dedicação de dois <br>
+          irmãos e se especializou no transporte de <br>
+          alimentos com segurança e pontualidade. Todos <br>
+          os nossos caminhões são refrigerados, garantindo <br>
+          a integridade dos produtos do início ao fim da <br>
+          entrega.
         </p>
         <p>
-          Contamos com uma frota versátil e motoristas experientes para atender diferentes
-          demandas logísticas. Atuamos como parceiros estratégicos de empresas que valorizam
-          prazos confiáveis, qualidade superior e total satisfação dos clientes.
+          Contamos com uma frota versátil e motoristas <br>
+          experientes para atender diferentes demandas <br>
+          logísticas. Atuamos como parceiros estratégicos <br>
+          de empresas que valorizam prazos confiáveis, <br>
+          qualidade superior e total satisfação dos clientes.
         </p>
       </div>
       <div class="quem-somos-img">
@@ -535,19 +532,24 @@
         <img src="icone alvo.png" alt="Ícone missão" />
         <h4>Nossa missão</h4>
         <p>
-          Comprometer-nos com excelência no transporte, garantindo prazos e qualidade superiores
+          Comprometer-nos com excelência no <br>
+          transporte, garantindo prazos e <br>
+          qualidade superiores
         </p>
       </div>
       <div class="missao">
         <img src="Icone seta.png" alt="Ícone visão" />
         <h4>Nossa visão</h4>
         <p>
-          Buscar ser líderes reconhecidos no transporte, estabelecendo novos padrões de excelência
+          Buscar ser líderes reconhecidos no <br>
+          transporte, estabelecendo novos <br>
+          padrões de excelência
         </p>
       </div>
     </div>
   </div>
 </section>
+
 
 
   <div class="container section" id="nossas-especialidades">
