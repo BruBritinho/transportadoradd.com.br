@@ -332,7 +332,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 20px; /* Diminuído de 40px para aproximar imagem e texto */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -341,10 +341,29 @@
   flex: 1 1 500px;
 }
 
+.quem-somos-texto .titulo {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #373535;
+  text-align: center;
+}
+
+.quem-somos-texto .subtitulo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #373535;
+  text-align: left; /* agora fica alinhado com os parágrafos */
+}
+
+.subtitulo .destaque {
+  color: #d7ad14;
+}
+
 .quem-somos-texto p {
   margin-bottom: 15px;
   line-height: 1.6;
-  white-space: normal;
 }
 
 .quem-somos-img {
@@ -398,28 +417,10 @@
 .missao p {
   font-size: 16px;
   line-height: 1.5;
-  white-space: normal;
 }
 
-/* 🔧 Novos estilos para centralizar corretamente */
 .highlight {
   color: #d7ad14;
-}
-
-.titulo {
-  font-size: 35px;
-  font-weight: 800;
-  margin-bottom: 5px;
-  color: #373535;
-  text-align: center;
-}
-
-.subtitulo {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #373535;
-  text-align: center;
 }
 
   </style>
