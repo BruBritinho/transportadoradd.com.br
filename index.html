@@ -352,13 +352,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 5px; /* ← valor bem reduzido para aproximar texto e imagem */
-  max-width: 1200px;
+  column-gap: 10px;  /* uso de column-gap para evitar interferência no wrap */
+  max-width: 1000px; /* menor largura total pra puxar as colunas mais perto */
   margin: 0 auto;
 }
 
 .quem-somos-texto {
-  flex: 1 1 500px;
+  flex: 1 1 480px;  /* diminui a largura mínima do texto */
 }
 
 .quem-somos-texto p {
@@ -367,10 +367,8 @@
 }
 
 .quem-somos-img {
-  flex: 1 1 400px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  position: relative;
+  flex: 1 1 420px;  /* garante largura parecida com o texto */
 }
 
 .quem-somos-img img {
