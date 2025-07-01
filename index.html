@@ -466,11 +466,20 @@
   margin-bottom: 10px;
 }
 
+.especialidades-texto {
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .lista-cidades {
   max-height: 200px;
   overflow-y: auto;
-  padding-right: 10px;
+  overflow-x: hidden;
   margin-top: 10px;
+  width: 100%;
 }
 
 .lista-cidades ul {
@@ -479,12 +488,15 @@
   margin: 0;
   font-size: 16px;
   color: #373535;
+  width: 100%;
+  display: block;
 }
 
 .lista-cidades ul li {
   margin-bottom: 6px;
+  white-space: normal; /* permite quebrar linha se necessário */
+  word-break: break-word;
   text-align: left;
-  white-space: nowrap;
 }
 
 .botao-regiao {
