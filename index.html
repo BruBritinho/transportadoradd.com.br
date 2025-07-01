@@ -332,7 +332,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px; /* Diminuído de 40px para aproximar imagem e texto */
+  gap: 20px; /* Reduzido para aproximar imagem do texto */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -341,23 +341,23 @@
   flex: 1 1 500px;
 }
 
-.quem-somos-texto .titulo {
+.titulo {
   font-size: 35px;
   font-weight: 800;
+  text-align: center;
   margin-bottom: 5px;
   color: #373535;
-  text-align: center;
 }
 
-.quem-somos-texto .subtitulo {
+.subtitulo {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #373535;
-  text-align: left; /* agora fica alinhado com os parágrafos */
+  text-align: left;
 }
 
-.subtitulo .destaque {
+.destaque {
   color: #d7ad14;
 }
 
@@ -369,6 +369,9 @@
 .quem-somos-img {
   position: relative;
   flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .quem-somos-img img {
@@ -417,10 +420,6 @@
 .missao p {
   font-size: 16px;
   line-height: 1.5;
-}
-
-.highlight {
-  color: #d7ad14;
 }
 
   </style>
@@ -521,6 +520,10 @@
     </div>
     <div class="quem-somos-img">
       <img src="Imagem caminhão atualizada.png" alt="Caminhão rodando" />
+      <div class="selo-experiencia">
+        <img src="icone-selo.png" alt="Ícone selo" />
+        <span><strong>5+ anos</strong><br>Experiência</span>
+      </div>
     </div>
   </div>
 
