@@ -414,8 +414,8 @@
 .especialidades {
   background-color: #ffffff;
   padding: 60px 20px;
+  font-size: 16px;
   color: #373535;
-  scroll-margin-top: 90px;
 }
 
 .especialidades-container {
@@ -424,11 +424,11 @@
 }
 
 .especialidades-titulo {
-  text-align: center;
   font-size: 35px;
   font-weight: 800;
-  margin-bottom: 40px;
   color: #373535;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .especialidades-titulo .highlight {
@@ -438,69 +438,72 @@
 .especialidades-conteudo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start; /* alinha imagem e texto pelo topo */
   gap: 40px;
 }
 
-.especialidades-img {
-  flex: 1 1 400px;
-}
-
 .especialidades-img img {
-  width: 100%;
-  max-width: 430px;
+  max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  max-height: 300px;
+  object-fit: contain;
 }
 
 .especialidades-texto {
-  flex: 1 1 500px;
-  font-size: 16px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
-.subtitulo {
+.especialidades-texto p {
+  line-height: 1.6;
+}
+
+.especialidades-texto .subtitulo {
   font-weight: bold;
   font-size: 16px;
-  color: #373535;
+  margin-top: 10px;
 }
 
 .lista-cidades {
-  max-height: 180px;      /* Menor altura */
-  max-width: 350px;       /* Menor largura */
+  max-height: 180px;
+  max-width: 350px;
   overflow-y: auto;
   padding-left: 15px;
-  border-left: 4px solid #d7ad14;
   padding-right: 10px;
+  border-left: 4px solid #d7ad14;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .lista-cidades ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
 }
 
 .lista-cidades li {
-  margin-bottom: 6px;
-  font-size: 15px;
-  color: #373535;
+  margin-bottom: 4px;
 }
 
 .botao-regiao {
+  margin-top: 16px;
   display: inline-block;
   background-color: #d7ad14;
   color: white;
   font-weight: bold;
-  text-decoration: none;
   padding: 10px 20px;
-  margin-top: 20px;
   border-radius: 6px;
-  text-align: center;
-  width: fit-content;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  align-self: start;
 }
+
+.botao-regiao:hover {
+  background-color: #c59c12;
+}
+
 
   </style>
 </head>
