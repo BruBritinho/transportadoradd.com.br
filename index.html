@@ -439,15 +439,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 60px; /* 🔧 AUMENTA o espaço horizontal entre imagem e texto */
-  padding: 0 20px;
+  gap: 70px; /* Aumenta espaço horizontal entre imagem e texto */
+  padding: 0 30px;
 }
 
 .especialidades-img {
   flex: 1 1 400px;
   display: flex;
   justify-content: center;
-  padding-left: 20px; /* 🔧 adiciona espaço na ESQUERDA da imagem */
+  padding-left: 40px; /* MAIOR margem lateral esquerda */
 }
 
 .especialidades-img img {
@@ -459,7 +459,7 @@
   flex: 1 1 500px;
   display: flex;
   flex-direction: column;
-  gap: 18px; /* 🔧 aumenta o espaçamento entre texto, lista e botão */
+  gap: 18px;
 }
 
 .especialidades-texto p {
@@ -472,9 +472,16 @@
   margin-top: 10px;
 }
 
+.lista-e-botao {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .lista-cidades {
   max-height: 160px;
-  max-width: 300px;
+  max-width: 260px;
   overflow-y: auto;
   padding-left: 15px;
   padding-right: 10px;
@@ -494,8 +501,6 @@
 }
 
 .botao-regiao {
-  margin-top: 16px;
-  display: inline-block;
   background-color: #d7ad14;
   color: white;
   font-weight: bold;
@@ -503,7 +508,7 @@
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  align-self: start;
+  height: fit-content;
 }
 
 .botao-regiao:hover {
@@ -651,56 +656,59 @@
           metropolitana de São Paulo e ABC paulista.
         </p>
         <p class="subtitulo">Confira as cidades atendidas:</p>
-        <div class="lista-cidades">
-          <ul>
-            <li>Arujá</li>
-            <li>Barueri</li>
-            <li>Biritiba Mirim</li>
-            <li>Caieiras</li>
-            <li>Cajamar</li>
-            <li>Carapicuíba</li>
-            <li>Cotia</li>
-            <li>Diadema</li>
-            <li>Embu das Artes</li>
-            <li>Embu-Guaçu</li>
-            <li>Ferraz de Vasconcelos</li>
-            <li>Francisco Morato</li>
-            <li>Franco da Rocha</li>
-            <li>Guararema</li>
-            <li>Guarulhos</li>
-            <li>Itapecerica da Serra</li>
-            <li>Itapevi</li>
-            <li>Itaquaquecetuba</li>
-            <li>Jandira</li>
-            <li>Juquitiba</li>
-            <li>Mairiporã</li>
-            <li>Mauá</li>
-            <li>Mogi das Cruzes</li>
-            <li>Osasco</li>
-            <li>Pirapora do Bom Jesus</li>
-            <li>Poá</li>
-            <li>Ribeirão Pires</li>
-            <li>Rio Grande da Serra</li>
-            <li>Salesópolis</li>
-            <li>Santa Isabel</li>
-            <li>Santana de Parnaíba</li>
-            <li>Santo André</li>
-            <li>São Bernardo do Campo</li>
-            <li>São Caetano do Sul</li>
-            <li>São Lourenço da Serra</li>
-            <li>São Paulo</li>
-            <li>Suzano</li>
-            <li>Taboão da Serra</li>
-            <li>Vargem Grande Paulista</li>
-          </ul>
-        </div>
 
-        <!-- BOTÃO ADICIONADO -->
-        <a href="#contato" class="botao-regiao">Confira sua região</a>
+        <div class="lista-e-botao">
+          <div class="lista-cidades">
+            <ul>
+              <li>Arujá</li>
+              <li>Barueri</li>
+              <li>Biritiba Mirim</li>
+              <li>Caieiras</li>
+              <li>Cajamar</li>
+              <li>Carapicuíba</li>
+              <li>Cotia</li>
+              <li>Diadema</li>
+              <li>Embu das Artes</li>
+              <li>Embu-Guaçu</li>
+              <li>Ferraz de Vasconcelos</li>
+              <li>Francisco Morato</li>
+              <li>Franco da Rocha</li>
+              <li>Guararema</li>
+              <li>Guarulhos</li>
+              <li>Itapecerica da Serra</li>
+              <li>Itapevi</li>
+              <li>Itaquaquecetuba</li>
+              <li>Jandira</li>
+              <li>Juquitiba</li>
+              <li>Mairiporã</li>
+              <li>Mauá</li>
+              <li>Mogi das Cruzes</li>
+              <li>Osasco</li>
+              <li>Pirapora do Bom Jesus</li>
+              <li>Poá</li>
+              <li>Ribeirão Pires</li>
+              <li>Rio Grande da Serra</li>
+              <li>Salesópolis</li>
+              <li>Santa Isabel</li>
+              <li>Santana de Parnaíba</li>
+              <li>Santo André</li>
+              <li>São Bernardo do Campo</li>
+              <li>São Caetano do Sul</li>
+              <li>São Lourenço da Serra</li>
+              <li>São Paulo</li>
+              <li>Suzano</li>
+              <li>Taboão da Serra</li>
+              <li>Vargem Grande Paulista</li>
+            </ul>
+          </div>
+
+          <a href="#contato" class="botao-regiao">Confira sua região</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
   <!-- Rodapé -->
   <footer id="footer">
