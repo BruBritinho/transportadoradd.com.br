@@ -576,8 +576,10 @@
   transform: scale(1.05);
 }
 
-
   </style>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWR5iLVwrZvmv6KtKXK8aYJFcstjBhHL8"></script>
+  
 </head>
 
 <body>
@@ -766,7 +768,7 @@
             </ul>
           </div>
 
-          <a href="#contato" class="botao-regiao">Confira sua região</a>
+          <a href="#" class="botao-regiao" onclick="abrirModalLocalizacao(); return false;">Confira sua região</a>
         </div>
       </div>
     </div>
@@ -824,5 +826,75 @@
       window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
     }
   </script>
+  <!-- MODAL: Mapa e localização -->
+<div id="modal-maps" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:2000; justify-content:center; align-items:center;">
+  <div style="background:white; max-width:90%; width:600px; padding:20px; border-radius:10px; position:relative;">
+    <span onclick="fecharModal()" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
+    <h3 style="text-align:center; margin-bottom:20px;">Verificação de Cobertura</h3>
+    <div id="resultado-localizacao" style="font-weight:bold; text-align:center; font-size:18px; margin-bottom:10px;"></div>
+    <div id="mapa" style="height:300px; width:100%; border-radius:10px;"></div>
+  </div>
+</div>
+
+<script>
+  const cidadesAtendidas = [
+    "aruja", "barueri", "biritiba mirim", "caieiras", "cajamar", "carapicuiba", "cotia",
+    "diadema", "embu das artes", "embu-guaçu", "ferraz de vasconcelos", "francisco morato",
+    "franco da rocha", "guararema", "guarulhos", "itapecerica da serra", "itapevi", "itaquaquecetuba",
+    "jandira", "juquitiba", "mairiporã", "maua", "mogi das cruzes", "osasco", "pirapora do bom jesus",
+    "poa", "ribeirao pires", "rio grande da serra", "salesopolis", "santa isabel", "santana de parnaiba",
+    "santo andre", "sao bernardo do campo", "sao caetano do sul", "sao lourenco da serra", "sao paulo",
+    "suzano", "taboao da serra", "vargem grande paulista"
+  ];
+
+  function abrirModalLocalizacao() {
+    document.getElementById('modal-maps').style.display = 'flex';
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      document.getElementById('resultado-localizacao').innerHTML = '<span style="color:red;">Geolocalização não suportada pelo navegador.</span>';
+    }
+  }
+
+  function fecharModal() {
+    document.getElementById('modal-maps').style.display = 'none';
+    document.getElementById('resultado-localizacao').innerHTML = '';
+    document.getElementById('mapa').innerHTML = '';
+  }
+
+  function success(position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    const map = new google.maps.Map(document.getElementById("mapa"), {
+      center: { lat: lat, lng: lng },
+      zoom: 12,
+    });
+    const marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      map: map,
+      title: "Sua Localização",
+    });
+
+    const geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ location: { lat: lat, lng: lng } }, (results, status) => {
+      if (status === "OK" && results[0]) {
+        const cidade = results[0].address_components.find(c => c.types.includes("administrative_area_level_2"));
+        const cidadeNome = cidade ? cidade.long_name.toLowerCase() : "";
+        if (cidadesAtendidas.includes(cidadeNome)) {
+          document.getElementById("resultado-localizacao").innerHTML = '<span style="color:green;">Você está na área de cobertura!</span>';
+        } else {
+          document.getElementById("resultado-localizacao").innerHTML = '<span style="color:red;">Você não está na área de cobertura.</span>';
+        }
+      } else {
+        document.getElementById("resultado-localizacao").innerHTML = '<span style="color:red;">Não foi possível determinar sua localização.</span>';
+      }
+    });
+  }
+
+  function error(err) {
+    document.getElementById("resultado-localizacao").innerHTML = '<span style="color:red;">Erro ao obter localização: ' + err.message + '</span>';
+  }
+</script>
+
 </body>
 </html>
