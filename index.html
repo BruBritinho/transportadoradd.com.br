@@ -578,8 +578,8 @@
 
   </style>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWR5iLVwrZvmv6KtKXK8aYJFcstjBhHL8"></script>
-  
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWR5iLVwrZvmv6KtKXK8aYJFcstjBhHL8"></script>
+   -->
 </head>
 
 <body>
@@ -768,7 +768,7 @@
             </ul>
           </div>
 
-          <a href="#" class="botao-regiao" onclick="abrirModalLocalizacao(); return false;">Confira sua região</a>
+          <a href="#" class="botao-regiao" onclick="verificarCobertura(); return false;">Confira sua região</a>
         </div>
       </div>
     </div>
@@ -847,52 +847,37 @@
     "suzano", "taboao da serra", "vargem grande paulista"
   ];
 
-  function abrirModalLocalizacao() {
-    document.getElementById('modal-maps').style.display = 'flex';
+  function verificarCobertura() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error);
     } else {
-      document.getElementById('resultado-localizacao').innerHTML = '<span style="color:red;">Geolocalização não suportada pelo navegador.</span>';
+      alert("Geolocalização não suportada pelo navegador.");
     }
-  }
-
-  function fecharModal() {
-    document.getElementById('modal-maps').style.display = 'none';
-    document.getElementById('resultado-localizacao').innerHTML = '';
-    document.getElementById('mapa').innerHTML = '';
   }
 
   function success(position) {
     const lat = position.coords.latitude;
-    const lng = position.coords.longitude;
-    const map = new google.maps.Map(document.getElementById("mapa"), {
-      center: { lat: lat, lng: lng },
-      zoom: 12,
-    });
-    const marker = new google.maps.Marker({
-      position: { lat: lat, lng: lng },
-      map: map,
-      title: "Sua Localização",
-    });
+    const lon = position.coords.longitude;
 
-    const geocoder = new google.maps.Geocoder();
-    geocoder.geocode({ location: { lat: lat, lng: lng } }, (results, status) => {
-      if (status === "OK" && results[0]) {
-        const cidade = results[0].address_components.find(c => c.types.includes("administrative_area_level_2"));
-        const cidadeNome = cidade ? cidade.long_name.toLowerCase() : "";
-        if (cidadesAtendidas.includes(cidadeNome)) {
-          document.getElementById("resultado-localizacao").innerHTML = '<span style="color:green;">Você está na área de cobertura!</span>';
+    fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`)
+      .then(response => response.json())
+      .then(data => {
+        const cidade = data.address.city || data.address.town || data.address.village || '';
+        const cidadeFormatada = cidade.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+        if (cidadesAtendidas.includes(cidadeFormatada)) {
+          alert(`✅ Você está na área de cobertura!\nCidade: ${cidade}`);
         } else {
-          document.getElementById("resultado-localizacao").innerHTML = '<span style="color:red;">Você não está na área de cobertura.</span>';
+          alert(`❌ Sua cidade (${cidade}) não está na área de cobertura.`);
         }
-      } else {
-        document.getElementById("resultado-localizacao").innerHTML = '<span style="color:red;">Não foi possível determinar sua localização.</span>';
-      }
-    });
+      })
+      .catch(() => {
+        alert("Erro ao identificar sua localização.");
+      });
   }
 
   function error(err) {
-    document.getElementById("resultado-localizacao").innerHTML = '<span style="color:red;">Erro ao obter localização: ' + err.message + '</span>';
+    alert("Erro ao obter localização: " + err.message);
   }
 </script>
 
