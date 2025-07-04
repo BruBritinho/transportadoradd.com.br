@@ -599,7 +599,9 @@
         <a href="#footer"><i class="fas fa-envelope"></i> Contato</a>
       </nav>
       <div class="quote">
-        <a href="#cotacao" class="quote-button">Solicite uma cotação</a>
+        <a href="#" class="quote-button" onclick="abrirGmailCotacao(); return false;">
+          Solicite uma cotação
+        </a>
       </div>
     </div>
   </header>
@@ -890,6 +892,13 @@ function verificarCobertura() {
 function fecharModalResultado() {
   document.getElementById('modal-resultado').style.display = 'none';
 }
+</script>
+
+<script>
+  function abrirGmailCotacao() {
+    const url = "https://mail.google.com/mail/?view=cm&fs=1&to=comercial@transportadoradd.com.br&su=Cotação&body=Olá, gostaria de solicitar uma cotação de frete.";
+    window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
+  }
 </script>
 
 
