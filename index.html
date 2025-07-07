@@ -189,20 +189,20 @@
     }
     
 /* VISIBILIDADE: versão mobile e desktop */
-.mobile-only {
-  display: none;
-}
-
 .desktop-only {
   display: block;
 }
+
+.mobile-only {
+  display: none;
+}
     @media screen and (max-width: 768px) {
-   .desktop-only {
-    display: none;
+   ..desktop-only {
+    display: none !important;
   }
 
   .mobile-only {
-    display: block;
+    display: block !important;
   }
   
   header, .menu-principal {
