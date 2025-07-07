@@ -193,20 +193,19 @@
   .header-container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     padding: 10px 15px;
     gap: 10px;
+    text-align: center;
   }
 
   .logo {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .logo img {
-    max-width: 120px; /* menor logo */
+    max-width: 120px;
     height: auto;
   }
 
@@ -215,25 +214,30 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px 20px;
-    max-width: 300px; /* evita quebrar muito largo */
+    max-width: 300px;
   }
 
   .navigation a {
     font-size: 13px;
-    padding: 2px 0;
-    flex: 1 1 45%; /* força quebra em duas colunas */
+    flex: 1 1 45%;
     text-align: left;
   }
 
+  /* Agrupa Contato + Botão */
   .quote {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex: 1 1 100%;
+    max-width: 300px;
+    flex-wrap: wrap;
   }
 
   .quote-button {
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 13px;
+    padding: 6px 12px;
+    white-space: nowrap;
   }
 
   .img-km {
