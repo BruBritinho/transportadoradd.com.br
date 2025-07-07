@@ -529,6 +529,7 @@
   color: #373535;
   text-align: center;
   margin-bottom: 30px;
+  line-height: 1.2; /* quebra suave */
 }
 
 .especialidades-titulo .highlight {
@@ -567,20 +568,21 @@
   margin: 0;
 }
 
-/* ✅ Subtítulo com mesmo tamanho do texto, apenas em negrito */
+/* ✅ Título secundário com tamanho 16px */
 .especialidades-texto .subtitulo {
   font-weight: bold;
-  font-size: inherit;
+  font-size: 16px;
   margin-top: 10px;
   margin-bottom: 2px;
 }
 
-/* ✅ Botão vai ficar embaixo da lista */
+/* ✅ Botão ocupa a largura total da lista */
 .lista-e-botao {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+  width: 100%;
 }
 
 .lista-cidades {
@@ -614,13 +616,13 @@
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  height: fit-content;
+  width: 100%; /* largura total da lista */
+  text-align: center;
 }
 
 .botao-regiao:hover {
   background-color: #c59c12;
 }
-
 
 .parceiros {
   background-color: #ffffff;
@@ -806,7 +808,8 @@
   <section class="especialidades" id="rodoviario">
   <div class="especialidades-container">
     <h2 class="especialidades-titulo">
-      Atendemos a região metropolitana de <span class="highlight">São Paulo</span>
+      Atendemos a região <br>
+      metropolitana de <span class="highlight">São Paulo</span>
     </h2>
 
     <div class="especialidades-conteudo">
