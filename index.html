@@ -190,86 +190,46 @@
     
     @media screen and (max-width: 768px) {
   
-  header, .menu-principal {
+  .header-container {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 10px;
   }
 
-  .main-header .logo {
+  .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    width: 100%;
   }
 
-  .main-header .logo img {
-    max-width: 180px; /* ajuste conforme desejar */
+  .logo img {
+    max-width: 180px;
     height: auto;
   }
 
-  /* Centraliza os links do menu */
   .navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    text-align: center;
+    gap: 8px;
   }
 
   .navigation a {
     font-size: 14px;
   }
 
-  /* Centraliza o botão de cotação */
   .quote {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    width: 100%;
   }
 
   .quote-button {
     font-size: 16px;
     padding: 10px 20px;
   }
-
-  .menu-principal a {
-    display: inline-block;
-    margin: 6px 0;
-    font-size: 14px;
-  }
-
-  .btn-cotacao {
-    position: relative;
-    margin: 10px auto;
-    display: block;
-    font-size: 16px;
-    padding: 10px 20px;
-    z-index: 10;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .hero-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-  .hero-header h1 {
-  font-size: 22px;
-  line-height: 1.2;
-  margin: 0;
-}
 
   .img-km {
     width: 50px;
