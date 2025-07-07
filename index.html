@@ -187,8 +187,24 @@
     .whatsapp-btn:hover {
       background-color: #128c7e;
     }
+    
+/* VISIBILIDADE: versão mobile e desktop */
+.mobile-only {
+  display: none;
+}
 
+.desktop-only {
+  display: block;
+}
     @media screen and (max-width: 768px) {
+   .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+  
   header, .menu-principal {
     flex-direction: column;
     align-items: center;
@@ -656,7 +672,20 @@
   </header>
 
   <!-- Seções -->
-  <section class="hero-section" id="quem-somos">
+  <section class="hero-section desktop-only" id="quem-somos">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Eficiência em<br>cada quilômetro</h1>
+      <p>Levamos sua carga com responsabilidade,<br>onde quer que ela precise chegar.</p>
+    </div>
+    <div class="hero-icon">
+      <img src="icon km.png" alt="Ícone de quilômetro" class="img-km">
+    </div>
+  </div>
+</section>
+
+<!-- VERSÃO MOBILE (visível apenas em telas pequenas) -->
+<section class="hero-section mobile-only" id="quem-somos-mobile">
   <div class="hero-content">
     <div class="hero-header">
       <h1>Eficiência em<br>cada quilômetro</h1>
