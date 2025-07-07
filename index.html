@@ -195,31 +195,34 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 15px;
-    padding: 10px 0; /* Reduz altura geral do header */
+    padding: 10px 15px;
+    gap: 10px;
   }
 
   .logo {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
   }
 
   .logo img {
-    max-width: 140px; /* reduz um pouco a logo */
+    max-width: 120px; /* menor logo */
     height: auto;
   }
 
   .navigation {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px; /* reduz espaço entre links */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    max-width: 300px; /* evita quebrar muito largo */
   }
 
   .navigation a {
     font-size: 13px;
     padding: 2px 0;
+    flex: 1 1 45%; /* força quebra em duas colunas */
+    text-align: left;
   }
 
   .quote {
@@ -229,7 +232,7 @@
   }
 
   .quote-button {
-    font-size: 15px;
+    font-size: 14px;
     padding: 8px 16px;
   }
 
