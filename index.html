@@ -191,54 +191,53 @@
     @media screen and (max-width: 768px) {
   
   .header-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 15px;
-    gap: 10px;
-    text-align: center;
-  }
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
 
-  .logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
+/* Logo centralizada */
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  .logo img {
-    max-width: 120px;
-    height: auto;
-  }
+/* Agrupar links em duas linhas */
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 15px;
+  max-width: 100%;
+}
 
-  .navigation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 20px;
-    max-width: 300px;
-  }
+/* Cada link fica proporcional */
+.navigation a {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
 
-  .navigation a {
-    font-size: 13px;
-    flex: 1 1 45%;
-    text-align: left;
-  }
+/* Botão alinhado ao lado do último link */
+.quote {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+}
 
-  /* Agrupa Contato + Botão */
-  .quote {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    flex: 1 1 100%;
-    max-width: 300px;
-    flex-wrap: wrap;
-  }
-
-  .quote-button {
-    font-size: 13px;
-    padding: 6px 12px;
-    white-space: nowrap;
-  }
+/* Botão */
+.quote-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  white-space: nowrap;
 
   .img-km {
     width: 50px;
