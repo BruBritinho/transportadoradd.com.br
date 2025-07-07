@@ -564,9 +564,10 @@
 
 .especialidades-texto p {
   line-height: 1.6;
+  margin: 0;
 }
 
-/* ⬇️ Subtitulo no tamanho do texto normal, porém negrito */
+/* ✅ Subtítulo com mesmo tamanho do texto, apenas em negrito */
 .especialidades-texto .subtitulo {
   font-weight: bold;
   font-size: inherit;
@@ -574,11 +575,12 @@
   margin-bottom: 2px;
 }
 
+/* ✅ Botão vai ficar embaixo da lista */
 .lista-e-botao {
   display: flex;
-  align-items: flex-end;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .lista-cidades {
@@ -593,15 +595,13 @@
   scroll-behavior: smooth;
 }
 
-/* ✅ Lista com apenas uma coluna e com bolinha */
+/* ✅ Lista sem bolinhas */
 .lista-cidades ul {
-  list-style: disc inside;
+  list-style: none;
   padding-left: 0;
   margin: 0;
-  columns: 1;
 }
 
-/* ✅ Espaçamento entre os itens da lista */
 .lista-cidades li {
   margin-bottom: 4px;
 }
