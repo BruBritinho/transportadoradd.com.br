@@ -518,37 +518,40 @@
   color: #373535;
 }
 
+/* Container geral */
 .especialidades-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Título principal */
 .especialidades-titulo {
   font-size: 35px;
   font-weight: 800;
   color: #373535;
   text-align: center;
   margin-bottom: 30px;
-  line-height: 1.2; /* quebra suave */
 }
 
 .especialidades-titulo .highlight {
   color: #d7ad14;
 }
 
+/* Conteúdo flexível */
 .especialidades-conteudo {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 150px;
+  gap: 100px; /* reduzido de 150px */
   padding: 0 30px;
 }
 
+/* Imagem */
 .especialidades-img {
   flex: 1 1 400px;
   display: flex;
   justify-content: center;
-  padding-left: 120px;
+  padding-left: 40px; /* Reduzida de 120px */
 }
 
 .especialidades-img img {
@@ -556,6 +559,7 @@
   border-radius: 12px;
 }
 
+/* Texto */
 .especialidades-texto {
   flex: 1 1 500px;
   display: flex;
@@ -565,18 +569,17 @@
 
 .especialidades-texto p {
   line-height: 1.6;
-  margin: 0;
 }
 
-/* ✅ Título secundário com tamanho 16px */
+/* Novo título da lista */
 .especialidades-texto .titulo-lista {
   font-weight: bold;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 30px; /* Aumentado para dar duas linhas de espaço */
   margin-bottom: 2px;
 }
 
-/* ✅ Botão ocupa a largura total da lista */
+/* Lista e botão */
 .lista-e-botao {
   display: flex;
   flex-direction: column;
@@ -585,6 +588,7 @@
   width: 100%;
 }
 
+/* Lista com bolinhas */
 .lista-cidades {
   max-height: 160px;
   max-width: 260px;
@@ -597,9 +601,8 @@
   scroll-behavior: smooth;
 }
 
-/* ✅ Lista sem bolinhas */
 .lista-cidades ul {
-  list-style: none;
+  list-style: disc inside; /* volta as bolinhas */
   padding-left: 0;
   margin: 0;
 }
@@ -608,6 +611,7 @@
   margin-bottom: 4px;
 }
 
+/* Botão ajustado */
 .botao-regiao {
   background-color: #d7ad14;
   color: white;
@@ -616,13 +620,14 @@
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  width: 260px; /* igual à lista */
+  width: 220px; /* Diminuído de 260px */
   text-align: center;
 }
 
 .botao-regiao:hover {
   background-color: #c59c12;
 }
+
 
 .parceiros {
   background-color: #ffffff;
