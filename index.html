@@ -673,7 +673,7 @@
 
   <!-- Seções -->
   <!-- VERSÃO DESKTOP -->
-<section class="hero-section desktop-only">
+<section id="hero-desktop" style="display: block;">
   <div class="hero-content">
     <div class="hero-text">
       <h1>Eficiência em<br>cada quilômetro</h1>
@@ -686,7 +686,7 @@
 </section>
 
 <!-- VERSÃO MOBILE -->
-<section class="hero-section mobile-only">
+<section id="hero-mobile" style="display: none;">
   <div class="hero-content">
     <div class="hero-header">
       <h1>Eficiência em</h1>
@@ -983,7 +983,6 @@ function fecharModalResultado() {
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
     function alternarHeroPorTamanho() {
       const isMobile = window.innerWidth <= 768;
       const heroDesktop = document.getElementById("hero-desktop");
@@ -1000,11 +999,11 @@ function fecharModalResultado() {
       }
     }
 
-    alternarHeroPorTamanho();
-    window.addEventListener("resize", alternarHeroPorTamanho);
-  });
-</script>
-
+    document.addEventListener("DOMContentLoaded", function () {
+      alternarHeroPorTamanho();
+      window.addEventListener("resize", alternarHeroPorTamanho);
+    });
+  </script>
 
 
 </body>
