@@ -188,28 +188,29 @@
       background-color: #128c7e;
     }
     
-/* VISIBILIDADE: versão mobile e desktop */
-.desktop-only {
-  display: block;
-}
-
-.mobile-only {
-  display: none;
-}
     @media screen and (max-width: 768px) {
-   ..desktop-only {
-    display: none !important;
-  }
-
-  .mobile-only {
-    display: block !important;
-  }
   
   header, .menu-principal {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
+
+  header .logo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 180px; /* aumente se quiser mais destaque */
+  height: auto;
+}
+
+/* Centraliza o botão de cotação */
+.btn-cotacao {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 24px;
+}
 
   .menu-principal a {
     display: inline-block;
@@ -964,31 +965,6 @@ function fecharModalResultado() {
     window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
   }
 </script>
-
-
-<script>
-    function alternarHeroPorTamanho() {
-      const isMobile = window.innerWidth <= 768;
-      const heroDesktop = document.getElementById("hero-desktop");
-      const heroMobile = document.getElementById("hero-mobile");
-
-      if (heroDesktop && heroMobile) {
-        if (isMobile) {
-          heroDesktop.style.display = "none";
-          heroMobile.style.display = "block";
-        } else {
-          heroDesktop.style.display = "block";
-          heroMobile.style.display = "none";
-        }
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      alternarHeroPorTamanho();
-      window.addEventListener("resize", alternarHeroPorTamanho);
-    });
-  </script>
-
 
 </body>
 </html>
