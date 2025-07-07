@@ -982,5 +982,26 @@ function fecharModalResultado() {
 </script>
 
 
+<script>
+  function alternarHeroPorTamanho() {
+    const isMobile = window.innerWidth <= 768;
+    const heroDesktop = document.getElementById("hero-desktop");
+    const heroMobile = document.getElementById("hero-mobile");
+
+    if (isMobile) {
+      heroDesktop.style.display = "none";
+      heroMobile.style.display = "block";
+    } else {
+      heroDesktop.style.display = "block";
+      heroMobile.style.display = "none";
+    }
+  }
+
+  // Executa ao carregar e redimensionar a tela
+  window.addEventListener("load", alternarHeroPorTamanho);
+  window.addEventListener("resize", alternarHeroPorTamanho);
+</script>
+
+
 </body>
 </html>
