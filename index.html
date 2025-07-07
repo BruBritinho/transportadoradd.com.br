@@ -521,64 +521,104 @@
 .especialidades-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 
 .especialidades-titulo {
-  font-size: 28px;
+  font-size: 35px;
+  font-weight: 800;
+  color: #373535;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.especialidades-conteudo {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.especialidades-titulo .highlight {
+  color: #d7ad14;
 }
 
-.especialidades-img img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 12px;
+.especialidades-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 150px;
+  padding: 0 30px;
 }
 
 .especialidades-img {
-  flex: 1;
-  min-width: 280px;
+  flex: 1 1 400px;
   display: flex;
   justify-content: center;
+  padding-left: 120px;
 }
 
-.especialidades-info {
-  flex: 1;
-  min-width: 280px;
+.especialidades-img img {
+  width: 120%;
+  border-radius: 12px;
 }
 
+.especialidades-texto {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.especialidades-texto p {
+  line-height: 1.6;
+}
+
+/* ⬇️ Subtitulo no tamanho do texto normal, porém negrito */
+.especialidades-texto .subtitulo {
+  font-weight: bold;
+  font-size: inherit;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.lista-e-botao {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lista-cidades {
+  max-height: 160px;
+  max-width: 260px;
+  overflow-y: auto;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-left: 4px solid #d7ad14;
+  font-size: 15px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ✅ Lista com apenas uma coluna e com bolinha */
 .lista-cidades ul {
   list-style: disc inside;
   padding-left: 0;
   margin: 0;
-  columns: 1; /* força apenas uma coluna */
+  columns: 1;
+}
+
+/* ✅ Espaçamento entre os itens da lista */
+.lista-cidades li {
+  margin-bottom: 4px;
 }
 
 .botao-regiao {
-  display: inline-block;
-  background-color: #d4af37;
+  background-color: #d7ad14;
   color: white;
   font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  height: fit-content;
 }
 
 .botao-regiao:hover {
-  background-color: #b8942e;
+  background-color: #c59c12;
 }
 
 
@@ -778,7 +818,8 @@
       <!-- Coluna da descrição e lista -->
       <div class="especialidades-info">
         <p>
-          Estamos localizados em Santo André, mas nossos transportes abrangem toda a região
+          Estamos localizados em Santo André, mas nossos <br>
+          transportes abrangem toda a região <br>
           metropolitana de São Paulo e ABC paulista.
         </p>
 
