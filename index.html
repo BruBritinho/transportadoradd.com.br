@@ -196,21 +196,41 @@
     gap: 10px;
   }
 
-  header .logo img {
-  display: block;
-  margin: 0 auto;
-  max-width: 180px; /* aumente se quiser mais destaque */
-  height: auto;
-}
+  .main-header .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-/* Centraliza o botão de cotação */
-.btn-cotacao {
-  display: block;
-  margin: 10px auto;
-  text-align: center;
-  font-size: 16px;
-  padding: 12px 24px;
-}
+  .main-header .logo img {
+    max-width: 180px; /* ajuste conforme desejar */
+    height: auto;
+  }
+
+  /* Centraliza os links do menu */
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navigation a {
+    font-size: 14px;
+  }
+
+  /* Centraliza o botão de cotação */
+  .quote {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .quote-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 
   .menu-principal a {
     display: inline-block;
