@@ -248,9 +248,10 @@
   }
 
   .especialidades-img img {
-    width: 90%;  /* Mantém a imagem responsiva */
-    max-width: 320px;
+    max-width: 90vw;
     height: auto;
+    width: auto;
+    object-fit: contain;
   }
 
   .especialidades-texto {
@@ -546,7 +547,8 @@
 }
 
 .especialidades-img img {
-  width: 120%;
+  width: 100%;          /* Reduzido de 120% para 100% */
+  max-width: 380px;     /* Limita para não ultrapassar */
   border-radius: 12px;
 }
 
