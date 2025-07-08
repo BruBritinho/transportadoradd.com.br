@@ -234,66 +234,65 @@
     white-space: nowrap;
   }
 
-  .especialidades-conteudo {
+  ..especialidades-conteudo {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; /* Espaço mínimo */
-    padding: 0 10px;
+    gap: 30px;
+    padding: 0 20px;
   }
 
   .especialidades-img {
-    padding-left: 0;
     justify-content: center;
-    margin-bottom: 0;
+    padding-left: 0;
   }
 
   .especialidades-img img {
-    max-width: 90vw;
-    height: auto;
-    width: auto;
-    object-fit: contain;
+    width: 100%;
+    max-width: 320px;
+    margin-left: 0;
   }
 
   .especialidades-texto {
+    margin-left: 0;
     text-align: center;
-    align-items: center;
   }
 
   .especialidades-texto p {
-    font-size: 16px;
-    line-height: 1.6;
+    margin-bottom: 32px;
   }
 
-  .titulo-lista {
+  .especialidades-texto .titulo-lista {
+    text-align: center;
     font-size: 16px;
-    font-weight: bold;
-    margin-top: 32px; /* espaço após o texto */
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .lista-e-botao {
-    flex-direction: column;
     align-items: center;
-    gap: 15px;
   }
 
   .lista-cidades {
     max-height: 160px;
-    width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     overflow-y: auto;
-    border-left: 4px solid #d7ad14;
     padding-left: 15px;
+    padding-right: 10px;
+    border-left: 4px solid #d7ad14;
     font-size: 15px;
-    text-align: left;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  .lista-cidades ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0;
   }
 
   .botao-regiao {
-    width: 100%;
-    max-width: 280px;
+    width: 220px;
     text-align: center;
-    padding: 10px 0;
-    font-size: 15px;
   }
     }
 
