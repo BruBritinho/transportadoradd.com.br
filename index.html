@@ -531,27 +531,28 @@
 
 /* Conteúdo flexível */
 .especialidades-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 0 10px; /* reduz margem interna horizontal */
-  gap: 0px; /* mínimo espaço entre imagem e texto */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  align-items: start;
+  gap: 20px; /* controla distância entre imagem e texto */
+  padding: 0 10px;
 }
 
 /* Imagem */
 .especialidades-img {
-  flex: 1 1 400px;
   display: flex;
-  justify-content: flex-start; /* alinha imagem à esquerda */
-  padding-left: 0; /* zera o padding lateral */
-  padding-right: 20px;
+  justify-content: flex-end; /* alinha imagem à direita da célula */
 }
 
 .especialidades-img img {
-  width: 122%;        /* Um pouco maior que 100% */
-  max-width: 520px;   /* Aumentado suavemente o limite */
+  width: 120%;
+  max-width: 500px;
   border-radius: 12px;
-  margin-left: 50px;
+}
+
+.especialidades-texto {
+  display: flex;
+  flex-direction: column;
 }
 
 .especialidades-texto p {
