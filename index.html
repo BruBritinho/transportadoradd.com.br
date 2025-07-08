@@ -534,21 +534,23 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding: 0 30px;
+  padding: 0 10px; /* reduz margem interna horizontal */
+  gap: 10px; /* mínimo espaço entre imagem e texto */
 }
 
 /* Imagem */
 .especialidades-img {
   flex: 1 1 400px;
   display: flex;
-  justify-content: center;
-  padding-left: 10px; /* reduzido ainda mais */
+  justify-content: flex-start; /* alinha imagem à esquerda */
+  padding-left: 0; /* zera o padding lateral */
 }
 
 .especialidades-img img {
   width: 122%;        /* Um pouco maior que 100% */
   max-width: 520px;   /* Aumentado suavemente o limite */
   border-radius: 12px;
+  margin-left: -20px;
 }
 
 /* Texto */
