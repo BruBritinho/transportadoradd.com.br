@@ -1,1076 +1,1116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>D&D Transportes</title>
-  <link rel="icon" type="image/png" href="ICONE D&D BRANCO.png" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #ffffff; /* fundo branco puro */
-  margin: 0;
-  padding: 0;
-}
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #373535;
-  padding: 0px 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  border: none;
-  margin: 0;
-}
-
-    .hero-section {
-  margin-top: 80px; /* ajuste esse valor conforme a altura do seu header */
-}
-
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 30px;
-    }
-
-.logo img {
-  max-height: 80px;
-  transform: scale(1.5);
-  transform-origin: left center;
-  margin-left: -20px; /* aumente esse valor até alinhar do jeito que você quiser */
-}
-    .navigation {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    .navigation a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1em;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.3s ease;
-    }
-
-    .navigation a:hover {
-      color: #d8ad13;
-    }
-
-    .navigation i {
-      font-size: 1em;
-      color: #d8ad13;
-    }
-
-    .quote-button {
-      background: white;
-      color: #000;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .quote-button:hover {
-      background: #d8ad13;
-      color: #000;
-    }
-
-    .container {
-      padding: 2em 1em;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section {
-      margin-bottom: 2em;
-      padding-top: 60px;
-      margin-top: -60px;
-    }
-
-    .section img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1em;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .section img:hover {
-      transform: scale(1.02);
-      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-.quote-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
-.header-phones {
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.header-phones i {
-  color: #d8ad13;
-}
-
-.header-phones a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.header-phones a:hover {
-  color: #d8ad13; /* Amarelo padrão do site */
-  text-decoration: underline;
-}
-
-    footer {
-      background-color: #373535;
-      color: white;
-      text-align: center;
-      padding: 0.5em 0 0.3em;
-      margin-top: 2em;
-      font-size: 0.85em;
-      box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    footer p {
-      margin: 0.5em 0;
-    }
-
-    footer i {
-      margin-right: 8px;
-      font-size: 1.2em;
-      color: #d8ad13;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-      color: #d8ad13;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 38px;
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-btn i {
-    font-size: 30px; /* ajuste proporcional */
-}
-
-    .whatsapp-btn:hover {
-      background-color: #128c7e;
-    }
-
-html {
-  scroll-behavior: smooth;
-}
-    
-#nossos-clientes,
-#nossas-especialidades,
-#rodoviario,
-#parceiros {
-  scroll-margin-top: 85px;
-}
-
- .hero-section {
-    background: url('Background_estrada.png') no-repeat center center;
-    background-size: cover;
-    height: auto; /* Deixa a altura crescer conforme o conteúdo */
-    min-height: 700px; /* Garante uma altura mínima */
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    scroll-margin-top: 90px;
-    color: white;
-    padding-top: 170px;
-    padding-bottom: 40px;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .hero-text {
-    max-width: 700px;
-    line-height: 1.3;
-  }
-
-  .hero-text h1 {
-    font-size: 45.1px;
-    font-weight: 900;
-    margin-bottom: 20px;
-  }
-
-  .hero-text p {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  .hero-icon img {
-    height: 150px;
-    width: auto;
-  }
-
-    @media screen and (max-width: 768px) {
-  
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-.logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-left: -20px;
-  }
-
-  .navigation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 15px;
-    max-width: 100%;
-  }
-
-  .navigation a {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    white-space: nowrap;
-  }
-
-  .quote {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
-  }
-
-  .quote-button {
-    padding: 6px 12px;
-    font-size: 14px;
-    border-radius: 6px;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-
-  .header-phones {
-    display: none;
-  }
-
-  .especialidades-conteudo {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .especialidades-img {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .especialidades-img img {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 12px;
-  }
-
-  .especialidades-texto {
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  .especialidades-texto p {
-    line-height: 1.6;
-    margin-bottom: 32px;
-  }
-
-  .especialidades-texto .titulo-lista {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-
-  .lista-e-botao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-  }
-
-  .lista-cidades {
-    max-height: 160px;
-    width: 90%;
-    overflow-y: auto;
-    padding-left: 15px;
-    padding-right: 10px;
-    border-left: 4px solid #d7ad14;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .lista-cidades ul {
-    list-style: disc inside;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .lista-cidades li {
-    margin-bottom: 4px;
-  }
-
-  .botao-regiao {
-    background-color: #d7ad14;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    width: 220px;
-    text-align: center;
-  }
-
-  .botao-regiao:hover {
-    background-color: #c59c12;
-  }
-
- #nossos-clientes,
-  #nossas-especialidades,
-  #rodoviario,
-  #parceiros {
-    scroll-margin-top: 140px;
-  }
-
- .hero-section {
-    background: url('Background_estrada.png') no-repeat center center;
-    background-size: cover;
-    padding-top: 150px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column; /* imagem abaixo */
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
-  .hero-text h1 {
-    font-size: 35px;
-    font-weight: 800;
-    line-height: 1.3;
-    margin-bottom: 10px;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-
-  .hero-icon img {
-    max-width: 120px;
-    height: auto;
-  }
-    }
-
-.diferenciais {
-  background-color: #ebebeb;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.diferenciais-titulo {
-  font-size: 35px;
-  font-weight: 800;
-  color: #373535;
-  margin-bottom: 40px;
-}
-
-.diferenciais-titulo .highlight {
-  color: #d7ad14;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 30px 20px;
-  max-width: 300px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* adicionado */
-  cursor: default; /* opcional, melhora a UX visual */
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.02); /* efeito de elevação */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* sombra mais forte */
-}
-
-.card img {
-  width: 50px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  color: #373535;
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.card p {
-  font-size: 15px;
-  color: #373535;
-  line-height: 1.5;
-}
-
-.quem-somos {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  font-size: 16px;
-  color: #373535;
-}
-
-.titulo {
-  font-size: 35px;
-  font-weight: 800;
-  color: #373535;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.subtitulo {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #373535;
-  text-align: left;
-}
-
-.destaque {
-  color: #d7ad14;
-}
-
-.quem-somos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  column-gap: 10px;  /* uso de column-gap para evitar interferência no wrap */
-  max-width: 1000px; /* menor largura total pra puxar as colunas mais perto */
-  margin: 0 auto;
-}
-
-.quem-somos-texto {
-  flex: 1 1 480px;  /* diminui a largura mínima do texto */
-}
-
-.quem-somos-texto p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.quem-somos-img {
-  position: relative;
-  flex: 1 1 420px;
-  margin-top: 30px; /* Abaixando a imagem */
-}
-
-.quem-somos-img img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.missoes {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.missao {
-  max-width: 300px;
-}
-
-.missao img {
-  width: 40px;
-  margin-bottom: 10px;
-}
-
-.missao h4 {
-  color: #d7ad14;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.missao p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.especialidades {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  font-size: 16px;
-  color: #373535;
-}
-
-/* Container geral */
-.especialidades-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Título principal */
-.especialidades-titulo {
-  font-size: 35px;
-  font-weight: 800;
-  color: #373535;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.especialidades-titulo .highlight {
-  color: #d7ad14;
-}
-
-/* Conteúdo flexível */
-.especialidades-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  padding: 0 20px;
-  justify-content: center;
-}
-
-/* Imagem */
-..especialidades-img {
-  flex: 1 1 400px;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-}
-
-.especialidades-img img {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 12px;
-}
-
-.especialidades-texto {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Novo título da lista */
-.especialidades-texto .titulo-lista {
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 0; /* já tem espaçamento acima */
-  margin-bottom: 8px;
-}
-
-/* Lista e botão */
-.lista-e-botao {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  width: 100%;
-}
-
-/* Lista com bolinhas */
-.lista-cidades {
-  max-height: 160px;
-  max-width: 260px;
-  overflow-y: auto;
-  padding-left: 15px;
-  padding-right: 10px;
-  border-left: 4px solid #d7ad14;
-  font-size: 15px;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-.lista-cidades ul {
-  list-style: disc inside; /* volta as bolinhas */
-  padding-left: 0;
-  margin: 0;
-}
-
-.lista-cidades li {
-  margin-bottom: 4px;
-}
-
-/* Botão ajustado */
-.botao-regiao {
-  background-color: #d7ad14;
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  width: 220px; /* Diminuído de 260px */
-  text-align: center;
-}
-
-.botao-regiao:hover {
-  background-color: #c59c12;
-}
-
-
-.parceiros {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-  color: #373535;
-}
-
-.parceiros-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.parceiros-titulo {
-  font-size: 35px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #373535;
-}
-
-.parceiros-titulo .highlight {
-  color: #d7ad14;
-}
-
-.parceiros-texto {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.logos-parceiros {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.logos-parceiros img {
-  max-height: 100px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-
-.logos-parceiros img:hover {
-  transform: scale(1.05);
-}
-
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D Transportes</title>
+    <link rel="icon" type="image/png" href="ICONE D&D BRANCO.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* CSS da região Cabeçalho */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #373535;
+            padding: 0px 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            border: none;
+            margin: 0;
+        }
+
+        .hero-section {
+            margin-top: 80px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .logo img {
+            max-height: 80px;
+            transform: scale(1.5);
+            transform-origin: left center;
+            margin-left: -20px;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #d8ad13;
+        }
+
+        .navigation i {
+            font-size: 1em;
+            color: #d8ad13;
+        }
+
+        .quote-button {
+            background: white;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .quote-button:hover {
+            background: #d8ad13;
+            color: #000;
+        }
+
+        .container {
+            padding: 2em 1em;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            margin-bottom: 2em;
+            padding-top: 60px;
+            margin-top: -60px;
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header-phones {
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .header-phones i {
+            color: #d8ad13;
+        }
+
+        .header-phones a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .header-phones a:hover {
+            color: #d8ad13;
+            text-decoration: underline;
+        }
+
+        /* CSS da região Rodapé */
+        footer {
+            background-color: #373535;
+            color: white;
+            text-align: center;
+            padding: 0.5em 0 0.3em;
+            margin-top: 2em;
+            font-size: 0.85em;
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0.5em 0;
+        }
+
+        footer i {
+            margin-right: 8px;
+            font-size: 1.2em;
+            color: #d8ad13;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #d8ad13;
+        }
+
+        /* CSS do botão Whatsapp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 38px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-btn i {
+            font-size: 30px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
+
+        /* CSS dos links do cabeçalho */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #nossos-clientes,
+        #nossas-especialidades,
+        #rodoviario,
+        #parceiros {
+            scroll-margin-top: 85px;
+        }
+
+        /* CSS da região D&D */
+        .hero-section {
+            background: url('Background_estrada.png') no-repeat center center;
+            background-size: cover;
+            height: auto;
+            min-height: 700px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            scroll-margin-top: 90px;
+            color: white;
+            padding-top: 170px;
+            padding-bottom: 40px;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            line-height: 1.3;
+        }
+
+        .hero-text h1 {
+            font-size: 45.1px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .hero-icon img {
+            height: 150px;
+            width: auto;
+        }
+
+        /* CSS para mobile */
+        @media screen and (max-width: 768px) {
+
+            /* CSS da região cabeçalho em mobile */
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .logo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-left: -20px;
+            }
+
+            .navigation {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+                max-width: 100%;
+            }
+
+            .navigation a {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                white-space: nowrap;
+            }
+
+            .quote {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 10px;
+            }
+
+            .quote-button {
+                padding: 6px 12px;
+                font-size: 14px;
+                border-radius: 6px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .header-phones {
+                display: none;
+            }
+
+            /* CSS da região Atendemos a região metropolitana de São Paulo em mobile */
+            .especialidades-conteudo {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .especialidades-img {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .especialidades-img img {
+                width: 90%;
+                max-width: 320px;
+                height: auto;
+                border-radius: 12px;
+            }
+
+            .especialidades-texto {
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .especialidades-texto p {
+                line-height: 1.6;
+                margin-bottom: 32px;
+            }
+
+            .especialidades-texto .titulo-lista {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            .lista-e-botao {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .lista-cidades {
+                max-height: 160px;
+                width: 90%;
+                overflow-y: auto;
+                padding-left: 15px;
+                padding-right: 10px;
+                border-left: 4px solid #d7ad14;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .lista-cidades ul {
+                list-style: disc inside;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .lista-cidades li {
+                margin-bottom: 4px;
+            }
+
+            .botao-regiao {
+                background-color: #d7ad14;
+                color: white;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 6px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+                width: 220px;
+                text-align: center;
+            }
+
+            .botao-regiao:hover {
+                background-color: #c59c12;
+            }
+
+            /* CSS dos links em mobile */
+            #nossos-clientes,
+            #nossas-especialidades,
+            #rodoviario,
+            #parceiros {
+                scroll-margin-top: 140px;
+            }
+
+            /* CSS da região D&D em mobile */
+            .hero-section {
+                background: url('Background_estrada.png') no-repeat center center;
+                background-size: cover;
+                padding-top: 150px;
+                padding-bottom: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+                color: white;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 35px;
+                font-weight: 800;
+                line-height: 1.3;
+                margin-bottom: 10px;
+            }
+
+            .hero-text p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            .hero-icon img {
+                max-width: 120px;
+                height: auto;
+            }
+        }
+
+        /* CSS da região Por que escolher a D&D transportes? */
+        .diferenciais {
+            background-color: #ebebeb;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .diferenciais-titulo {
+            font-size: 35px;
+            font-weight: 800;
+            color: #373535;
+            margin-bottom: 40px;
+        }
+
+        .diferenciais-titulo .highlight {
+            color: #d7ad14;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px 20px;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #373535;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #373535;
+            line-height: 1.5;
+        }
+
+        /* CSS da região Quem somos */
+        .quem-somos {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            font-size: 16px;
+            color: #373535;
+        }
+
+        .titulo {
+            font-size: 35px;
+            font-weight: 800;
+            color: #373535;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .subtitulo {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #373535;
+            text-align: left;
+        }
+
+        .destaque {
+            color: #d7ad14;
+        }
+
+        .quem-somos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            column-gap: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .quem-somos-texto {
+            flex: 1 1 480px;
+        }
+
+        .quem-somos-texto p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .quem-somos-img {
+            position: relative;
+            flex: 1 1 420px;
+            margin-top: 30px;
+        }
+
+        .quem-somos-img img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .missoes {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .missao {
+            max-width: 300px;
+        }
+
+        .missao img {
+            width: 40px;
+            margin-bottom: 10px;
+        }
+
+        .missao h4 {
+            color: #d7ad14;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .missao p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* CSS da região Atendemos a região metropolitana de São Paulo */
+        .especialidades {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            font-size: 16px;
+            color: #373535;
+        }
+
+        .especialidades-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .especialidades-titulo {
+            font-size: 35px;
+            font-weight: 800;
+            color: #373535;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .especialidades-titulo .highlight {
+            color: #d7ad14;
+        }
+
+        .especialidades-conteudo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            padding: 0 20px;
+            justify-content: center;
+        }
+
+        .especialidades-img {
+            flex: 1 1 400px;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        .especialidades-img img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+        }
+
+        .especialidades-texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .especialidades-texto .titulo-lista {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .lista-e-botao {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .lista-cidades {
+            max-height: 160px;
+            max-width: 260px;
+            overflow-y: auto;
+            padding-left: 15px;
+            padding-right: 10px;
+            border-left: 4px solid #d7ad14;
+            font-size: 15px;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .lista-cidades ul {
+            list-style: disc inside;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .lista-cidades li {
+            margin-bottom: 4px;
+        }
+
+        .botao-regiao {
+            background-color: #d7ad14;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            width: 220px;
+            text-align: center;
+        }
+
+        .botao-regiao:hover {
+            background-color: #c59c12;
+        }
+
+        /* CSS da região Parceiros */
+        .parceiros {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            color: #373535;
+        }
+
+        .parceiros-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .parceiros-titulo {
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #373535;
+        }
+
+        .parceiros-titulo .highlight {
+            color: #d7ad14;
+        }
+
+        .parceiros-texto {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .logos-parceiros {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .logos-parceiros img {
+            max-height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logos-parceiros img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo">
-        <a href="#">
-          <img src="LOGO D&D BRANCO.png" alt="D&D Transportes" />
-        </a>
-      </div>
-      <nav class="navigation">
-        <a href="#nossas-especialidades"><i class="fas fa-cogs"></i> Nossas Especialidades</a>
-        <a href="#nossos-clientes"><i class="fas fa-users"></i> Quem Somos</a>
-        <a href="#rodoviario"><i class="fas fa-truck"></i> Rodoviário</a>
-        <a href="#parceiros"><i class="fas fa-handshake"></i> Parceiros</a>
-        <a href="#footer"><i class="fas fa-envelope"></i> Contato</a>
-      </nav>
-      <div class="quote-wrapper">
-        <a href="#" class="quote-button" onclick="abrirGmailCotacao(); return false;">
-          Solicite uma cotação
-        </a>
-        <div class="header-phones">
-          <i class="fas fa-phone"></i>
-            <a href="https://wa.me/5511947472376" target="_blank">(11) 94747-2376 - Deivid</a>
-            /
-            <a href="https://wa.me/5511992385028" target="_blank">(11) 99238-5028 - Denis</a>
+    <!-- Cabeçalho -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="LOGO D&D BRANCO.png" alt="D&D Transportes" />
+                </a>
+            </div>
+            <nav class="navigation">
+                <a href="#nossas-especialidades"><i class="fas fa-cogs"></i> Nossas Especialidades</a>
+                <a href="#nossos-clientes"><i class="fas fa-users"></i> Quem Somos</a>
+                <a href="#rodoviario"><i class="fas fa-truck"></i> Rodoviário</a>
+                <a href="#parceiros"><i class="fas fa-handshake"></i> Parceiros</a>
+                <a href="#footer"><i class="fas fa-envelope"></i> Contato</a>
+            </nav>
+            <div class="quote-wrapper">
+                <a href="#" class="quote-button" onclick="abrirGmailCotacao(); return false;">
+                    Solicite uma cotação
+                </a>
+                <div class="header-phones">
+                    <i class="fas fa-phone"></i>
+                    <a href="https://wa.me/5511947472376" target="_blank">(11) 94747-2376 - Deivid</a>
+                    /
+                    <a href="https://wa.me/5511992385028" target="_blank">(11) 99238-5028 - Denis</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Seções -->
-  <section class="hero-section" id="quem-somos">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Eficiência em<br>cada quilômetro</h1>
-      <p>Levamos sua carga com responsabilidade,<br>onde quer que ela precise chegar.</p>
-    </div>
-    <div class="hero-icon">
-      <img src="icon km.png" alt="Ícone de quilômetro">
-    </div>
-  </div>
-</section>
-
-
-  <section class="diferenciais" id="nossas-especialidades">
-  <div class="container">
-    <h2 class="diferenciais-titulo">Por que escolher a <span class="highlight">D&D</span> transportes?</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="ICONE GELO.png" alt="Ícone Gelo" />
-        <h3>Transporte Refrigerado</h3>
-        <p>
-          Equipamentos modernos com controle rigoroso de temperatura para garantir a qualidade dos produtos.<br><br>
-          • Itens refrigerados<br>
-          • Cargas secas<br>
-          • Cargas alimentícias
-        </p>
-      </div>
-      <div class="card">
-        <img src="ICONE SEGURANÇA.png" alt="Ícone Segurança" />
-        <h3>Segurança garantida</h3>
-        <p>
-          Protocolos rigorosos de segurança e rastreamento em tempo real para máxima confiabilidade.<br><br>
-          • Motoristas qualificados<br>
-          • Prazos garantidos<br>
-          • Logística otimizada
-        </p>
-      </div>
-      <div class="card">
-        <img src="ICONE MAPA.png" alt="Ícone Mapa" />
-        <h3>Cobertura regional</h3>
-        <p>
-          Atendemos toda a região metropolitana de São Paulo com frota própria e parcerias estratégicas.<br><br>
-          • São Paulo capital<br>
-          • ABC Paulista<br>
-          • Grande São Paulo
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section class="quem-somos" id="nossos-clientes">
-  <h2 class="titulo">Quem somos?</h2>
-
-  <div class="quem-somos-container">
-    <div class="quem-somos-texto">
-      <h3 class="subtitulo">Dois irmãos, <span class="destaque">um objetivo</span></h3>
-      <p>
-        A D&D Transportes nasceu da dedicação de dois <br>
-        irmãos e se especializou no transporte de <br>
-        alimentos com segurança e pontualidade. Todos <br>
-        os nossos caminhões são refrigerados, garantindo <br>
-        a integridade dos produtos do início ao fim da <br>
-        entrega.
-      </p>
-      <p>
-        Contamos com uma frota versátil e motoristas <br>
-        experientes para atender diferentes demandas <br>
-        logísticas. Atuamos como parceiros estratégicos <br>
-        de empresas que valorizam prazos confiáveis, <br>
-        qualidade superior e total satisfação dos clientes.
-      </p>
-    </div>
-
-    <div class="quem-somos-img">
-      <img src="Imagem caminhão atualizada.png" alt="Caminhão rodando" />
-    </div>
-  </div>
-
-  <div class="missoes">
-    <div class="missao">
-      <img src="icone alvo.png" alt="Ícone missão" />
-      <h4>Nossa missão</h4>
-      <p>
-        Comprometer-nos com excelência no <br>
-        transporte, garantindo prazos e <br>
-        qualidade superiores.
-      </p>
-    </div>
-    <div class="missao">
-      <img src="Icone seta.png" alt="Ícone visão" />
-      <h4>Nossa visão</h4>
-      <p>
-        Buscar ser líderes reconhecidos no <br>
-        transporte, estabelecendo novos <br>
-        padrões de excelência.
-      </p>
-    </div>
-  </div>
-</section>
-
-  <section class="especialidades" id="rodoviario">
-  <div class="especialidades-container">
-    <h2 class="especialidades-titulo">
-      Atendemos a região metropolitana de <span class="highlight">São Paulo</span>
-    </h2>
-
-    <div class="especialidades-conteudo">
-      <!-- Coluna da imagem -->
-      <div class="especialidades-img">
-        <img src="Mapa SAO PAULO.png" alt="Mapa da região metropolitana de São Paulo" />
-      </div>
-
-      <!-- Coluna da descrição e lista -->
-      <div class="especialidades-info">
-        <p>
-          Estamos localizados em Santo André, mas nossos <br>
-          transportes abrangem toda a região <br>
-          metropolitana de São Paulo e ABC paulista.
-        </p>
-        <br>
-        <p class="titulo-lista"><strong>Confira as cidades atendidas:</strong></p>
-        <div class="lista-e-botao">
-          <div class="lista-cidades">
-            <ul>
-              <li>Arujá</li><li>Barueri</li><li>Biritiba Mirim</li><li>Caieiras</li><li>Cajamar</li>
-              <li>Carapicuíba</li><li>Cotia</li><li>Diadema</li><li>Embu das Artes</li><li>Embu-Guaçu</li>
-              <li>Ferraz de Vasconcelos</li><li>Francisco Morato</li><li>Franco da Rocha</li>
-              <li>Guararema</li><li>Guarulhos</li><li>Itapecerica da Serra</li><li>Itapevi</li>
-              <li>Itaquaquecetuba</li><li>Jandira</li><li>Juquitiba</li><li>Mairiporã</li><li>Mauá</li>
-              <li>Mogi das Cruzes</li><li>Osasco</li><li>Pirapora do Bom Jesus</li><li>Poá</li>
-              <li>Ribeirão Pires</li><li>Rio Grande da Serra</li><li>Salesópolis</li><li>Santa Isabel</li>
-              <li>Santana de Parnaíba</li><li>Santo André</li><li>São Bernardo do Campo</li>
-              <li>São Caetano do Sul</li><li>São Lourenço da Serra</li><li>São Paulo</li><li>Suzano</li>
-              <li>Taboão da Serra</li><li>Vargem Grande Paulista</li>
-            </ul>
-          </div>
-
-          <a href="#" class="botao-regiao" onclick="verificarCobertura(); return false;">
-            Confira sua região
-          </a>
+    <!-- D&D -->
+    <section class="hero-section" id="quem-somos">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Eficiência em<br>cada quilômetro</h1>
+                <p>Levamos sua carga com responsabilidade,<br>onde quer que ela precise chegar.</p>
+            </div>
+            <div class="hero-icon">
+                <img src="icon km.png" alt="Ícone de quilômetro">
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Por que escolher a D&D transportes? -->
+    <section class="diferenciais" id="nossas-especialidades">
+        <div class="container">
+            <h2 class="diferenciais-titulo">Por que escolher a <span class="highlight">D&D</span> transportes?</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="ICONE GELO.png" alt="Ícone Gelo" />
+                    <h3>Transporte Refrigerado</h3>
+                    <p>
+                        Equipamentos modernos com controle rigoroso de temperatura para garantir a qualidade dos
+                        produtos.<br><br>
+                        • Itens refrigerados<br>
+                        • Cargas secas<br>
+                        • Cargas alimentícias
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="ICONE SEGURANÇA.png" alt="Ícone Segurança" />
+                    <h3>Segurança garantida</h3>
+                    <p>
+                        Protocolos rigorosos de segurança e rastreamento em tempo real para máxima
+                        confiabilidade.<br><br>
+                        • Motoristas qualificados<br>
+                        • Prazos garantidos<br>
+                        • Logística otimizada
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="ICONE MAPA.png" alt="Ícone Mapa" />
+                    <h3>Cobertura regional</h3>
+                    <p>
+                        Atendemos toda a região metropolitana de São Paulo com frota própria e parcerias
+                        estratégicas.<br><br>
+                        • São Paulo capital<br>
+                        • ABC Paulista<br>
+                        • Grande São Paulo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem somos -->
+    <section class="quem-somos" id="nossos-clientes">
+        <h2 class="titulo">Quem somos?</h2>
+
+        <div class="quem-somos-container">
+            <div class="quem-somos-texto">
+                <h3 class="subtitulo">Dois irmãos, <span class="destaque">um objetivo</span></h3>
+                <p>
+                    A D&D Transportes nasceu da dedicação de dois <br>
+                    irmãos e se especializou no transporte de <br>
+                    alimentos com segurança e pontualidade. Todos <br>
+                    os nossos caminhões são refrigerados, garantindo <br>
+                    a integridade dos produtos do início ao fim da <br>
+                    entrega.
+                </p>
+                <p>
+                    Contamos com uma frota versátil e motoristas <br>
+                    experientes para atender diferentes demandas <br>
+                    logísticas. Atuamos como parceiros estratégicos <br>
+                    de empresas que valorizam prazos confiáveis, <br>
+                    qualidade superior e total satisfação dos clientes.
+                </p>
+            </div>
+
+            <div class="quem-somos-img">
+                <img src="Imagem caminhão atualizada.png" alt="Caminhão rodando" />
+            </div>
+        </div>
+
+        <div class="missoes">
+            <div class="missao">
+                <img src="icone alvo.png" alt="Ícone missão" />
+                <h4>Nossa missão</h4>
+                <p>
+                    Comprometer-nos com excelência no <br>
+                    transporte, garantindo prazos e <br>
+                    qualidade superiores.
+                </p>
+            </div>
+            <div class="missao">
+                <img src="Icone seta.png" alt="Ícone visão" />
+                <h4>Nossa visão</h4>
+                <p>
+                    Buscar ser líderes reconhecidos no <br>
+                    transporte, estabelecendo novos <br>
+                    padrões de excelência.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atendemos a região metropolitana de São Paulo -->
+    <section class="especialidades" id="rodoviario">
+        <div class="especialidades-container">
+            <h2 class="especialidades-titulo">
+                Atendemos a região metropolitana de <span class="highlight">São Paulo</span>
+            </h2>
+
+            <div class="especialidades-conteudo">
+                <div class="especialidades-img">
+                    <img src="Mapa SAO PAULO.png" alt="Mapa da região metropolitana de São Paulo" />
+                </div>
+
+                <div class="especialidades-info">
+                    <p>
+                        Estamos localizados em Santo André, mas nossos <br>
+                        transportes abrangem toda a região <br>
+                        metropolitana de São Paulo e ABC paulista.
+                    </p>
+                    <br>
+                    <p class="titulo-lista"><strong>Confira as cidades atendidas:</strong></p>
+                    <div class="lista-e-botao">
+                        <div class="lista-cidades">
+                            <ul>
+                                <li>Arujá</li>
+                                <li>Barueri</li>
+                                <li>Biritiba Mirim</li>
+                                <li>Caieiras</li>
+                                <li>Cajamar</li>
+                                <li>Carapicuíba</li>
+                                <li>Cotia</li>
+                                <li>Diadema</li>
+                                <li>Embu das Artes</li>
+                                <li>Embu-Guaçu</li>
+                                <li>Ferraz de Vasconcelos</li>
+                                <li>Francisco Morato</li>
+                                <li>Franco da Rocha</li>
+                                <li>Guararema</li>
+                                <li>Guarulhos</li>
+                                <li>Itapecerica da Serra</li>
+                                <li>Itapevi</li>
+                                <li>Itaquaquecetuba</li>
+                                <li>Jandira</li>
+                                <li>Juquitiba</li>
+                                <li>Mairiporã</li>
+                                <li>Mauá</li>
+                                <li>Mogi das Cruzes</li>
+                                <li>Osasco</li>
+                                <li>Pirapora do Bom Jesus</li>
+                                <li>Poá</li>
+                                <li>Ribeirão Pires</li>
+                                <li>Rio Grande da Serra</li>
+                                <li>Salesópolis</li>
+                                <li>Santa Isabel</li>
+                                <li>Santana de Parnaíba</li>
+                                <li>Santo André</li>
+                                <li>São Bernardo do Campo</li>
+                                <li>São Caetano do Sul</li>
+                                <li>São Lourenço da Serra</li>
+                                <li>São Paulo</li>
+                                <li>Suzano</li>
+                                <li>Taboão da Serra</li>
+                                <li>Vargem Grande Paulista</li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="botao-regiao" onclick="verificarCobertura(); return false;">
+                            Confira sua região
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section class="parceiros" id="parceiros">
+        <div class="parceiros-container">
+            <h2 class="parceiros-titulo">
+                Parceiros de <span class="highlight">confiança</span>
+            </h2>
+            <p class="parceiros-texto">
+                Com nossa ampla experiência no setor, atuamos no atendimento a <br>
+                grandes marcas, em parceria estratégica com outras transportadoras.
+            </p>
+            <div class="logos-parceiros">
+                <img src="logo marba.png" alt="Marba">
+                <img src="Nestle-Logo.png" alt="Nestlé">
+                <img src="tirolez logo.png" alt="Tirolez">
+                <img src="dpa lactilis logo.png" alt="DPA Lactalis">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="footer">
+        <p>Nos contate e comece hoje a aprimorar suas entregas!</p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="#" onclick="openGmailPopup()">transportesddmacena@gmail.com</a>
+        </p>
+        <p>
+            <a href="https://wa.me/5511947472376" target="_blank">
+                <i class="fas fa-phone"></i> (11) 94747-2376
+            </a><br />
+            <a href="https://wa.me/5511992385028" target="_blank">
+                <i class="fas fa-phone"></i> (11) 99238-5028
+            </a>
+        </p>
+        <br />
+        <p>&copy; <span id="ano-atual"></span> D&D Transportes - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal de Resultado -->
+    <div id="modal-resultado"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:2000; justify-content:center; align-items:center;">
+        <div
+            style="background:white; max-width:90%; width:400px; padding:20px; border-radius:10px; position:relative; text-align:center;">
+            <span onclick="fecharModalResultado()"
+                style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
+            <div id="texto-resultado" style="font-size:18px;"></div>
+        </div>
     </div>
-  </div>
-</section>
 
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511992385028" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<section class="parceiros" id="parceiros">
-  <div class="parceiros-container">
-    <h2 class="parceiros-titulo">
-      Parceiros de <span class="highlight">confiança</span>
-    </h2>
-    <p class="parceiros-texto">
-      Com nossa ampla experiência no setor, atuamos no atendimento a <br>
-      grandes marcas, em parceria estratégica com outras transportadoras.
-    </p>
-    <div class="logos-parceiros">
-      <img src="logo marba.png" alt="Marba">
-      <img src="Nestle-Logo.png" alt="Nestlé">
-      <img src="tirolez logo.png" alt="Tirolez">
-      <img src="dpa lactilis logo.png" alt="DPA Lactalis">
-    </div>
-  </div>
-</section>
+    <!-- Script Gmail -->
+    <script>
+        function openGmailPopup() {
+            const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com";
+            window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
+        }
+    </script>
 
+    <!-- Script de Resultado -->
+    <script>
+        function verificarCobertura() {
+            const cidadesAtendidas = [
+                "aruja", "barueri", "biritiba mirim", "caieiras", "cajamar", "carapicuiba", "cotia",
+                "diadema", "embu das artes", "embu-guaçu", "ferraz de vasconcelos", "francisco morato",
+                "franco da rocha", "guararema", "guarulhos", "itapecerica da serra", "itapevi", "itaquaquecetuba",
+                "jandira", "juquitiba", "mairiporã", "maua", "mogi das cruzes", "osasco", "pirapora do bom jesus",
+                "poa", "ribeirao pires", "rio grande da serra", "salesopolis", "santa isabel", "santana de parnaiba",
+                "santo andre", "sao bernardo do campo", "sao caetano do sul", "sao lourenco da serra", "sao paulo",
+                "suzano", "taboao da serra", "vargem grande paulista"
+            ];
 
-  <!-- Rodapé -->
-  <footer id="footer">
-    <p>Nos contate e comece hoje a aprimorar suas entregas!</p>
-    <p>
-      <i class="fas fa-envelope"></i>
-      <a href="#" onclick="openGmailPopup()">transportesddmacena@gmail.com</a>
-    </p>
-    <p>
-      <a href="https://wa.me/5511947472376" target="_blank">
-        <i class="fas fa-phone"></i> (11) 94747-2376
-      </a><br />
-      <a href="https://wa.me/5511992385028" target="_blank">
-        <i class="fas fa-phone"></i> (11) 99238-5028
-      </a>
-    </p>
-    <br />
-    <p>&copy; <span id="ano-atual"></span> D&D Transportes - Todos os direitos reservados.</p>
-  </footer>
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(async (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
 
-  <!-- Botão WhatsApp -->
-  <a href="https://wa.me/5511992385028" class="whatsapp-btn" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+                    try {
+                        const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
+                        const data = await response.json();
 
-  <!-- Script Gmail -->
-  <script>
-    function openGmailPopup() {
-      const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com";
-      window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
-    }
-  </script>
-  <!-- MODAL: Mapa e localização -->
-<!-- Modal de Resultado -->
-<div id="modal-resultado" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:2000; justify-content:center; align-items:center;">
-  <div style="background:white; max-width:90%; width:400px; padding:20px; border-radius:10px; position:relative; text-align:center;">
-    <span onclick="fecharModalResultado()" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
-    <div id="texto-resultado" style="font-size:18px;"></div>
-  </div>
-</div>
+                        const cidade = data.address.city || data.address.town || data.address.village || data.address.county;
+                        const cidadeLower = cidade.toLowerCase();
 
+                        const estaNaCobertura = cidadesAtendidas.includes(cidadeLower);
 
-<script>
-function verificarCobertura() {
-  const cidadesAtendidas = [
-    "aruja", "barueri", "biritiba mirim", "caieiras", "cajamar", "carapicuiba", "cotia",
-    "diadema", "embu das artes", "embu-guaçu", "ferraz de vasconcelos", "francisco morato",
-    "franco da rocha", "guararema", "guarulhos", "itapecerica da serra", "itapevi", "itaquaquecetuba",
-    "jandira", "juquitiba", "mairiporã", "maua", "mogi das cruzes", "osasco", "pirapora do bom jesus",
-    "poa", "ribeirao pires", "rio grande da serra", "salesopolis", "santa isabel", "santana de parnaiba",
-    "santo andre", "sao bernardo do campo", "sao caetano do sul", "sao lourenco da serra", "sao paulo",
-    "suzano", "taboao da serra", "vargem grande paulista"
-  ];
+                        let mensagem = '';
+                        if (estaNaCobertura) {
+                            mensagem = `<span style="color:green;">✅ Você está na área de cobertura!</span><br><strong>Cidade:</strong> ${cidade}`;
+                        } else {
+                            mensagem = `<span style="color:red;">❌ Você <b>não</b> está na área de cobertura.</span><br><strong>Cidade detectada:</strong> ${cidade}`;
+                        }
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(async (position) => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
+                        document.getElementById('texto-resultado').innerHTML = mensagem;
+                        document.getElementById('modal-resultado').style.display = 'flex';
 
-      try {
-        const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
-        const data = await response.json();
+                    } catch (err) {
+                        document.getElementById('texto-resultado').innerHTML = "Erro ao obter localização.";
+                        document.getElementById('modal-resultado').style.display = 'flex';
+                    }
 
-        const cidade = data.address.city || data.address.town || data.address.village || data.address.county;
-        const cidadeLower = cidade.toLowerCase();
-
-        const estaNaCobertura = cidadesAtendidas.includes(cidadeLower);
-
-        let mensagem = '';
-        if (estaNaCobertura) {
-          mensagem = `<span style="color:green;">✅ Você está na área de cobertura!</span><br><strong>Cidade:</strong> ${cidade}`;
-        } else {
-          mensagem = `<span style="color:red;">❌ Você <b>não</b> está na área de cobertura.</span><br><strong>Cidade detectada:</strong> ${cidade}`;
+                }, (err) => {
+                    document.getElementById('texto-resultado').innerHTML = "Permissão de localização negada.";
+                    document.getElementById('modal-resultado').style.display = 'flex';
+                });
+            } else {
+                document.getElementById('texto-resultado').innerHTML = "Seu navegador não suporta geolocalização.";
+                document.getElementById('modal-resultado').style.display = 'flex';
+            }
         }
 
-        document.getElementById('texto-resultado').innerHTML = mensagem;
-        document.getElementById('modal-resultado').style.display = 'flex';
+        function fecharModalResultado() {
+            document.getElementById('modal-resultado').style.display = 'none';
+        }
+    </script>
 
-      } catch (err) {
-        document.getElementById('texto-resultado').innerHTML = "Erro ao obter localização.";
-        document.getElementById('modal-resultado').style.display = 'flex';
-      }
+    <!-- Script de gmail no botão Solicite uma cotação -->
+    <script>
+        function abrirGmailCotacao() {
+            const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com&su=Cotação&body=Olá, gostaria de solicitar uma cotação de frete.";
+            window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
+        }
+    </script>
 
-    }, (err) => {
-      document.getElementById('texto-resultado').innerHTML = "Permissão de localização negada.";
-      document.getElementById('modal-resultado').style.display = 'flex';
-    });
-  } else {
-    document.getElementById('texto-resultado').innerHTML = "Seu navegador não suporta geolocalização.";
-    document.getElementById('modal-resultado').style.display = 'flex';
-  }
-}
-
-function fecharModalResultado() {
-  document.getElementById('modal-resultado').style.display = 'none';
-}
-</script>
-
-<script>
-  function abrirGmailCotacao() {
-    const url = "https://mail.google.com/mail/?view=cm&fs=1&to=transportesddmacena@gmail.com&su=Cotação&body=Olá, gostaria de solicitar uma cotação de frete.";
-    window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=600");
-  }
-</script>
-
-<script>
-  document.getElementById("ano-atual").textContent = new Date().getFullYear();
-</script>
-
+    <!-- Script de ano -->
+    <script>
+        document.getElementById("ano-atual").textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
