@@ -131,18 +131,35 @@
       box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
     }
 
+.quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
 .header-phones {
-  margin-top: 6px;
-  font-size: 13px;
   color: #fff;
-  text-align: center;
-  line-height: 1.4;
   font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header-phones i {
   color: #d8ad13;
-  margin-right: 6px;
+}
+
+.header-phones a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-phones a:hover {
+  text-decoration: underline;
 }
 
     footer {
@@ -759,12 +776,15 @@ html {
         <a href="#parceiros"><i class="fas fa-handshake"></i> Parceiros</a>
         <a href="#footer"><i class="fas fa-envelope"></i> Contato</a>
       </nav>
-      <div class="quote">
+      <div class="quote-wrapper">
         <a href="#" class="quote-button" onclick="abrirGmailCotacao(); return false;">
           Solicite uma cotação
         </a>
         <div class="header-phones">
-          <i class="fas fa-phone"></i> (11) 94747-2376 - Deivid / (11) 99238-5028 - Denis
+          <i class="fas fa-phone"></i>
+            <a href="https://wa.me/5511947472376" target="_blank">(11) 94747-2376 - Deivid</a>
+            /
+            <a href="https://wa.me/5511992385028" target="_blank">(11) 99238-5028 - Denis</a>
         </div>
       </div>
     </div>
