@@ -980,7 +980,7 @@ html {
       </a>
     </p>
     <br />
-    <p>&copy; 2025 D&D Transportes - Todos os direitos reservados.</p>
+    <p>&copy; <span id="ano-atual"></span> D&D Transportes - Todos os direitos reservados.</p>
   </footer>
 
   <!-- Botão WhatsApp -->
@@ -1068,6 +1068,9 @@ function fecharModalResultado() {
   }
 </script>
 
+<script>
+  document.getElementById("ano-atual").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
