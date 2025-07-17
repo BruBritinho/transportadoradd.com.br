@@ -179,9 +179,11 @@
 
 .footer-content {
     display: flex;
-    justify-content: space-between;  /* Mantém o texto à esquerda e a logo à direita */
-    align-items: flex-start;         /* Alinha o topo dos blocos */
-    padding: 30px 60px;              /* Espaçamento interno nas laterais */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 100px;  /* Aumenta a distância das margens laterais */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-text {
@@ -192,7 +194,7 @@
 }
 
 .footer-logo img {
-    max-width: 120px;
+    max-width: 130px;
     height: auto;
     display: block;
 }
