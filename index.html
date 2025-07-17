@@ -179,13 +179,10 @@
 
 .footer-content {
     display: flex;
-    justify-content: flex-start;  /* <- muda aqui */
-    align-items: center;
-    padding: 0 40px;
-    flex-wrap: nowrap;
-    gap: 80px;  /* controle do espaço entre texto e logo */
+    justify-content: space-between;  /* Mantém o texto à esquerda e a logo à direita */
+    align-items: flex-start;         /* Alinha o topo dos blocos */
+    padding: 30px 60px;              /* Espaçamento interno nas laterais */
 }
-
 
 .footer-text {
     flex: 1;
