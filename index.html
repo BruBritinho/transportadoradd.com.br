@@ -167,68 +167,59 @@
         }
 
         /* CSS da região Rodapé */
-        footer {
-  background-color: #2a2929;
-  color: white;
-  padding: 30px 20px;
-  font-size: 14px;
-}
-
-.footer-container {
+        .footer-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .footer-content {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  text-align: left;
-  width: 100%;
-  max-width: 1100px;
-  gap: 40px;
-  margin: 0 auto;
+  flex: 1;
 }
 
 .footer-text {
+  color: white;
+  text-align: left;
   flex: 1;
-  margin-left: -10px;
+  margin-left: 24px; /* margem suave */
+  font-size: 0.95em;  /* fonte menor */
+}
+
+.footer-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
 }
 
 .footer-title {
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-footer i {
-  margin-right: 8px;
-  font-size: 1.1em;
-  color: #d8ad13;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #d8ad13;
+  margin-bottom: 12px;
 }
 
 .footer-logo img {
   max-height: 80px;
-  transform: scale(1.2);
-  transform-origin: center center;
-  margin-right: 20px;
+  margin-right: 24px; /* margem suave */
+  transform: scale(1.15); /* tamanho um pouco maior */
+  transform-origin: center;
 }
 
+/* Copyright */
 .footer-copy {
-  font-size: 13px;
+  width: 100%;
   text-align: center;
-  margin-top: 20px;
+  font-size: 0.85em;
+  margin-top: -10px;
+  color: white;
 }
 
         /* CSS do botão Whatsapp */
