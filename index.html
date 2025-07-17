@@ -183,7 +183,21 @@
             text-align: center;
             padding: 20px;
         }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
         
+        .footer-logo img {
+            max-height: 80px;
+            transform: scale(1.5);
+            transform-origin: center center;
+            margin: 0 auto;
+        }
+
         footer p {
             margin: 0.5em 0;
         }
@@ -202,21 +216,6 @@
 
         footer a:hover {
             color: #d8ad13;
-        }
-
-        .footer-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .footer-logo img {
-            max-height: 80px;
-            transform: scale(1.5);
-            transform-origin: center center;
-            margin-left: 0;
         }
 
         /* CSS do botão Whatsapp */
@@ -489,6 +488,26 @@
             .hero-icon img {
                 max-width: 120px;
                 height: auto;
+            }
+
+             /* CSS da região Rodapé em mobile */
+            .footer-container {
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            .footer-logo {
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .footer-logo img {
+                transform: scale(1.3);
+                margin-bottom: 10px;
+            }
+
+            footer p {
+                margin: 0.3em 0;
             }
         }
 
