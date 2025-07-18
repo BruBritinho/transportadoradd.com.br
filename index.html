@@ -406,10 +406,17 @@
                 margin: 0;
             }
 
-            .especialidades-texto {
-                align-items: center;
+            .especialidades-texto p {
+                text-align: justify;
+                text-justify: inter-word;
+                hyphens: auto;
+                word-break: break-word;
             }
 
+            .especialidades-texto p span {
+                white-space: nowrap;
+            }
+            
             .especialidades-texto .titulo-lista {
                 font-weight: bold;
                 font-size: 16px;
