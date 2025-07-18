@@ -661,115 +661,103 @@
             }
 
             /* CSS da região Atendemos a região metropolitana de São Paulo em mobile */
-            .especialidades-conteudo {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 30px;
-                padding: 0 20px;
-                align-items: center;
-            } 
+           .especialidades-conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
+    }
 
-            .especialidades-img {
-                flex: 1 1 400px;
-                display: flex;
-                justify-content: flex-start;
-                margin: 0;
-            }
+    .especialidades-img {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
 
-            .especialidades-conteudo p {
-                text-align: justify;
-            }
+    .especialidades-img img {
+        max-width: 280px;
+        height: auto;
+    }
 
-            .especialidades-conteudo ul {
-                text-align: left;
-                display: inline-block;
-                margin: 0 auto;
-            }
+    .especialidades-conteudo p {
+        text-align: justify;
+    }
 
-            .especialidades-conteudo button {
-                display: block;
-                margin: 20px auto;
-            }
+    .especialidades-texto p {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        overflow-wrap: break-word;
+        line-break: loose;
+        widows: 2;
+        orphans: 2;
+    }
 
-            .especialidades-img img {
-                flex: 1 1 400px;
-                display: flex;
-                justify-content: flex-start;
-                margin: 0;
-            }
+    .especialidades-texto p span {
+        white-space: nowrap;
+    }
 
-            .especialidades-texto p {
-                text-align: justify;
-                text-justify: inter-word;
-                hyphens: auto;
-                overflow-wrap: break-word;
-                line-break: loose;
-                widows: 2;
-                orphans: 2;
-            }
+    .especialidades-texto .titulo-lista {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        text-align: center;
+        width: 100%;
+    }
 
-            .especialidades-texto p span {
-                white-space: nowrap;
-            }
-            
-            .especialidades-texto .titulo-lista {
-                font-weight: bold;
-                font-size: 16px;
-                margin-top: 0;
-                margin-bottom: 8px;
-                text-align: center;
-            }
+    .lista-e-botao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        text-align: center;
+    }
 
-            .lista-e-botao {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-                width: 100%;
-                align-items: center;
-                text-align: center; 
-            }
+    .lista-cidades {
+        max-height: 160px;
+        max-width: 260px;
+        overflow-y: auto;
+        padding-left: 15px;
+        padding-right: 10px;
+        border-left: 4px solid #d7ad14;
+        font-size: 15px;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+        margin: 0 auto;
+        text-align: left;
+    }
 
-            .lista-cidades {
-                max-height: 160px;
-                max-width: 260px;
-                overflow-y: auto;
-                padding-left: 15px;
-                padding-right: 10px;
-                border-left: 4px solid #d7ad14;
-                font-size: 15px;
-                line-height: 1.6;
-                scroll-behavior: smooth;
-                margin: 0 auto;
-                text-align: left;
-            }
+    .lista-cidades ul {
+        list-style: disc inside;
+        padding-left: 0;
+        margin: 0;
+    }
 
-            .lista-cidades ul {
-                list-style: disc inside;
-                padding-left: 0;
-                margin: 0;
-            }
+    .lista-cidades li {
+        margin-bottom: 4px;
+    }
 
-            .lista-cidades li {
-                margin-bottom: 4px;
-            }
+    .botao-regiao {
+        background-color: #d7ad14;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        width: 220px;
+        text-align: center;
+        margin: 0 auto;
+    }
 
-            .botao-regiao {
-                background-color: #d7ad14;
-                color: white;
-                font-weight: bold;
-                padding: 10px 20px;
-                border-radius: 6px;
-                text-decoration: none;
-                transition: background-color 0.3s ease;
-                width: 220px;
-                text-align: center;
-                margin: 0 auto;
-            }
-
-            .botao-regiao:hover {
-                background-color: #c59c12;
-            }
+    .botao-regiao:hover {
+        background-color: #c59c12;
+    }
 
             /* CSS dos links em mobile */
             #nossos-clientes,
