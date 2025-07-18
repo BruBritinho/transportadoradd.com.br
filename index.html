@@ -661,39 +661,41 @@
             }
 
             /* CSS da região Atendemos a região metropolitana de São Paulo em mobile */
-           .especialidades-conteudo {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 0 20px;
-        align-items: center;
-        justify-content: center;
+           .especialidades {
+        padding: 40px 15px;
+        font-size: 15px;
     }
 
-    .especialidades-img {
-        flex: 1 1 100%;
-        display: flex;
-        justify-content: center;
-        margin: 0;
+    .especialidades-titulo {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .especialidades-conteudo {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 10px;
     }
 
     .especialidades-img img {
-        max-width: 280px;
-        height: auto;
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
     }
 
-    .especialidades-conteudo p {
-        text-align: justify;
+    .especialidades-texto {
+        display: flex;
+        flex-direction: column;
     }
 
     .especialidades-texto p {
         text-align: justify;
-        text-justify: inter-word;
         hyphens: auto;
-        overflow-wrap: break-word;
-        line-break: loose;
-        widows: 2;
-        orphans: 2;
+        word-break: break-word;
+        line-height: 1.7;
     }
 
     .especialidades-texto p span {
@@ -703,19 +705,15 @@
     .especialidades-texto .titulo-lista {
         font-weight: bold;
         font-size: 16px;
-        margin-top: 0;
+        margin-top: 20px;
         margin-bottom: 8px;
         text-align: center;
-        width: 100%;
     }
 
     .lista-e-botao {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 16px;
-        width: 100%;
         text-align: center;
+        width: 100%;
     }
 
     .lista-cidades {
@@ -727,7 +725,6 @@
         border-left: 4px solid #d7ad14;
         font-size: 15px;
         line-height: 1.6;
-        scroll-behavior: smooth;
         margin: 0 auto;
         text-align: left;
     }
@@ -752,7 +749,8 @@
         transition: background-color 0.3s ease;
         width: 220px;
         text-align: center;
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
+        display: block;
     }
 
     .botao-regiao:hover {
